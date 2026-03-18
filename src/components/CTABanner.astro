@@ -1,0 +1,41 @@
+---
+import { quoteLinks } from '../data/siteData';
+---
+
+<section class="relative py-16 md:py-20 bg-[#B8D430] overflow-hidden">
+  <!-- Angular Geometric Design Elements -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute -top-10 -left-20 w-[500px] h-[500px] bg-white/5 rotate-[30deg]"></div>
+    <div class="absolute -bottom-20 -right-10 w-[400px] h-[400px] bg-white/5 rotate-[-20deg]"></div>
+    <div class="absolute top-0 right-[30%] w-[300px] h-[2px] bg-[#2D2D2D]/10 rotate-[25deg]"></div>
+    <div class="absolute bottom-0 left-[20%] w-[250px] h-[2px] bg-[#2D2D2D]/10 rotate-[-15deg]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">
+      Ready to Find the Right Coverage?
+    </h2>
+    <p class="text-lg text-[#2D2D2D]/70 mb-10">
+      It takes less than 5 minutes to get started.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href={quoteLinks.personal}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#2D2D2D] text-white font-bold rounded-lg text-lg hover:bg-[#1a1a1a] hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+      >
+        Personal Coverage
+      </a>
+      <a
+        href={quoteLinks.commercial}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#2D2D2D] text-white font-bold rounded-lg text-lg hover:bg-[#1a1a1a] hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+      >
+        Business Coverage
+      </a>
+    </div>
+  </div>
+</section>

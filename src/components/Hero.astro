@@ -1,0 +1,79 @@
+---
+import { quoteLinks } from '../data/siteData';
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#2D2D2D]">
+  <!-- Mountain Silhouette Background -->
+  <div class="absolute inset-0 bottom-0 pointer-events-none">
+    <svg class="absolute bottom-0 w-full h-[60%]" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 600V380L120 320L240 360L360 280L480 340L600 240L720 300L840 200L960 260L1080 180L1200 240L1320 160L1440 220V600H0Z" fill="#252525" />
+      <path d="M0 600V420L160 380L320 420L480 360L640 400L800 320L960 380L1120 300L1280 360L1440 280V600H0Z" fill="#282828" />
+      <path d="M0 600V480L200 450L400 480L600 440L800 470L1000 420L1200 460L1440 400V600H0Z" fill="#2A2A2A" />
+    </svg>
+  </div>
+
+  <!-- Angular Geometric Accent Lines -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-[10%] -left-20 w-[400px] h-[2px] bg-[#B8D430]/20 rotate-[35deg]"></div>
+    <div class="absolute top-[25%] -left-10 w-[300px] h-[1px] bg-[#B8D430]/10 rotate-[35deg]"></div>
+    <div class="absolute bottom-[15%] -right-20 w-[500px] h-[2px] bg-[#B8D430]/20 rotate-[-35deg]"></div>
+    <div class="absolute bottom-[30%] -right-10 w-[350px] h-[1px] bg-[#B8D430]/10 rotate-[-35deg]"></div>
+    <div class="absolute top-[60%] -left-16 w-[250px] h-[1px] bg-[#B8D430]/15 rotate-[25deg]"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+      You Shouldn't Have to Figure Out<br class="hidden sm:block" /> Insurance Alone
+    </h1>
+    <p class="text-lg sm:text-xl text-[#9CA3AF] max-w-2xl mx-auto mb-10 leading-relaxed">
+      Whether you're protecting your family, your home, or your business — you deserve an agent who actually picks up the phone.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+      <a
+        href={quoteLinks.personal}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+      >
+        Personal Coverage
+      </a>
+      <a
+        href={quoteLinks.commercial}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+      >
+        Business Coverage
+      </a>
+      <a
+        href={quoteLinks.life}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+      >
+        Life Insurance
+      </a>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#9CA3AF]">
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#B8D430]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+        Veteran Owned
+      </span>
+      <span class="text-[#B8D430]/40">|</span>
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#B8D430]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+        Licensed in 28 States
+      </span>
+      <span class="text-[#B8D430]/40">|</span>
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#B8D430]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+        5-Star Rated
+      </span>
+    </div>
+  </div>
+</section>

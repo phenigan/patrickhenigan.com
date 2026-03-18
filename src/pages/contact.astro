@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Contact Patrick Henigan | Valor Insurance Group — Get in Touch"
+  description="Contact Patrick Henigan at Valor Insurance Group. Call 303-994-7814, email patrick@valorins.com, or fill out our contact form. Licensed in 28 states."
+>
+  <section class="pt-32 pb-8 px-4 bg-[#2D2D2D]">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Contact Us</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Let's Talk About Your Coverage</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        Whether you have a question, need a policy review, or are ready to get started — we're here. Reach out by phone, email, or the form below.
+      </p>
+    </div>
+  </section>
+
+  <ContactForm />
+</BaseLayout>

@@ -1,0 +1,166 @@
+---
+import { navItems, siteConfig } from '../data/siteData';
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 bg-[#2D2D2D]/95 backdrop-blur-md transition-shadow duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-1 text-2xl lg:text-3xl font-extrabold tracking-tight">
+        <span class="text-white">V</span><span class="text-[#B8D430]">I</span><span class="text-white">G</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-sm font-medium text-gray-300 hover:text-[#B8D430] transition-colors duration-200"
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- Desktop Right Side -->
+      <div class="hidden lg:flex items-center gap-5">
+        <a
+          href={siteConfig.phoneHref}
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+        >
+          {siteConfig.phone}
+        </a>
+        <a
+          href="/contact/"
+          class="inline-flex items-center px-5 py-2.5 bg-[#B8D430] text-[#1a1a1a] text-sm font-bold rounded-lg hover:bg-[#a8c420] transition-colors duration-200"
+        >
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        class="lg:hidden relative w-10 h-10 flex items-center justify-center text-gray-300 hover:text-white transition-colors"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <svg
+          id="menu-icon-open"
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          id="menu-icon-close"
+          class="w-6 h-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden border-t border-white/10"
+  >
+    <div class="px-4 py-4 space-y-1 bg-[#2D2D2D]/98 backdrop-blur-md">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-[#B8D430] hover:bg-white/5 rounded-lg transition-colors duration-200"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <div class="pt-3 mt-3 border-t border-white/10 space-y-3">
+        <a
+          href={siteConfig.phoneHref}
+          class="block px-4 py-2 text-sm font-medium text-gray-400"
+        >
+          {siteConfig.phone}
+        </a>
+        <a
+          href="/contact/"
+          class="block mx-4 px-5 py-3 bg-[#B8D430] text-[#1a1a1a] text-sm font-bold rounded-lg text-center hover:bg-[#a8c420] transition-colors duration-200"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer to offset fixed header -->
+<div class="h-16 lg:h-20"></div>
+
+<script>
+  function initHeader() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    const header = document.getElementById('site-header');
+
+    if (!menuBtn || !mobileMenu || !iconOpen || !iconClose || !header) return;
+
+    let isOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.classList.toggle('hidden', !isOpen);
+      iconOpen.classList.toggle('hidden', isOpen);
+      iconClose.classList.toggle('hidden', !isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll shadow
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 10) {
+            header.classList.add('shadow-lg', 'shadow-black/20');
+          } else {
+            header.classList.remove('shadow-lg', 'shadow-black/20');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+
+  // Run on initial load and on Astro page transitions
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script>

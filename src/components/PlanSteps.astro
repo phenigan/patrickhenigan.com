@@ -1,0 +1,64 @@
+---
+import { quoteLinks } from '../data/siteData';
+---
+
+<section class="py-20 md:py-28 bg-[#333333]">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-16">
+      Getting Covered Is Simpler Than You Think
+    </h2>
+
+    <!-- Steps -->
+    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-14">
+      <!-- Connecting Line (desktop only) -->
+      <div class="hidden md:block absolute top-10 left-[20%] right-[20%] h-[2px] bg-[#B8D430]/30">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#B8D430]/60 via-[#B8D430]/30 to-[#B8D430]/60"></div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="relative text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D2D] border-2 border-[#B8D430]/30 mb-6 relative z-10">
+          <span class="text-[#B8D430] text-2xl font-bold">01</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Tell Us About You</h3>
+        <p class="text-[#9CA3AF] leading-relaxed max-w-xs mx-auto">
+          Share a few details so we can understand what matters most.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D2D] border-2 border-[#B8D430]/30 mb-6 relative z-10">
+          <span class="text-[#B8D430] text-2xl font-bold">02</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">We Find the Right Fit</h3>
+        <p class="text-[#9CA3AF] leading-relaxed max-w-xs mx-auto">
+          We shop across top carriers to find coverage that actually matches your life.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D2D] border-2 border-[#B8D430]/30 mb-6 relative z-10">
+          <span class="text-[#B8D430] text-2xl font-bold">03</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Move Forward with Confidence</h3>
+        <p class="text-[#9CA3AF] leading-relaxed max-w-xs mx-auto">
+          You get the right protection — and someone who answers when you call.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center">
+      <a
+        href={quoteLinks.personal}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-10 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5"
+      >
+        Get Started Today
+      </a>
+    </div>
+  </div>
+</section>

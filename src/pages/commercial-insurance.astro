@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { commercialInsuranceTypes, quoteLinks } from '../data/siteData';
+
+const faqItems = [
+  {
+    question: 'What kind of business insurance do I need?',
+    answer: 'It depends on your industry, size, and risk exposure. Most businesses need general liability and commercial property at a minimum. If you have employees, workers compensation is required in most states. We assess your specific situation and recommend exactly what you need.',
+  },
+  {
+    question: 'How much does commercial insurance cost?',
+    answer: 'Costs vary widely based on your industry, revenue, number of employees, and coverage needs. As an independent agency, we shop across many carriers to find competitive rates. Many small businesses can get solid coverage for a few hundred dollars a month.',
+  },
+  {
+    question: 'Can you insure my business vehicles?',
+    answer: 'Yes. We offer commercial auto insurance for any business vehicle — from single trucks to full fleets. This covers liability, collision, and comprehensive damage for vehicles used in your business operations.',
+  },
+  {
+    question: 'What is professional liability insurance?',
+    answer: "Also known as Errors & Omissions (E&O) insurance, professional liability protects you if a client claims your professional services caused them financial harm. It's essential for consultants, contractors, accountants, and other service-based businesses.",
+  },
+  {
+    question: 'Do I need a commercial umbrella policy?',
+    answer: 'If a lawsuit exceeds your underlying policy limits, an umbrella policy covers the rest. For businesses with significant assets or high-risk operations, this is a smart investment that provides peace of mind.',
+  },
+];
+---
+
+<BaseLayout
+  title="Commercial Insurance | Valor Insurance Group — Protect Your Business"
+  description="Commercial auto, general liability, workers comp, and more. Veteran-owned independent insurance agency that shops top carriers for your business coverage needs."
+>
+  <!-- AEO Opener -->
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Commercial Insurance</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Your Business Deserves Better Than a One-Size-Fits-All Policy</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        A commercial insurance agent helps protect your business from the unexpected — liability claims, property damage, employee injuries, and more. We work with you to build a customized coverage plan that fits your industry, your risks, and your budget.
+      </p>
+      <div class="mt-8">
+        <a
+          href={quoteLinks.commercial}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+        >
+          Get Started
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Sound Familiar?</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I'm not sure if my business is properly covered."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"My premiums keep going up but my coverage feels the same."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I need someone who understands my industry."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services grid -->
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Coverage Options</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Comprehensive business coverage tailored to your operation.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {commercialInsuranceTypes.map((type) => (
+          <ServiceCard name={type.name} description={type.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-step plan -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">01</div>
+          <h3 class="text-white font-bold mb-2">Tell Us About Your Business</h3>
+          <p class="text-[#9CA3AF] text-sm">Share your industry, size, and coverage needs so we can understand your risks.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">02</div>
+          <h3 class="text-white font-bold mb-2">We Build Your Plan</h3>
+          <p class="text-[#9CA3AF] text-sm">We shop across top carriers and build a coverage plan tailored to your business.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">03</div>
+          <h3 class="text-white font-bold mb-2">Operate with Confidence</h3>
+          <p class="text-[#9CA3AF] text-sm">Focus on running your business knowing you have the right protection in place.</p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a
+          href={quoteLinks.commercial}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get Started Today
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Commercial Insurance FAQ" items={faqItems} />
+  <CTABanner />
+</BaseLayout>

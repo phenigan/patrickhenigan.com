@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import GuideSection from '../components/GuideSection.astro';
+import PlanSteps from '../components/PlanSteps.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CoverageMap from '../components/CoverageMap.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import SocialFeed from '../components/SocialFeed.astro';
+
+const homeFAQ = [
+  {
+    question: 'What does an independent insurance agent do?',
+    answer: 'An independent insurance agent works for you — not one specific insurance company. We shop across multiple top-rated carriers to find the coverage that best fits your needs and budget. Think of us as your personal insurance advocate.',
+  },
+  {
+    question: 'How is Valor Insurance Group different from buying direct?',
+    answer: 'When you buy direct from one company, you only see their options. We compare rates and coverage from dozens of carriers to make sure you get the best value. Plus, you get a real person who answers when you call.',
+  },
+  {
+    question: 'What states do you serve?',
+    answer: 'We are currently licensed in 28 states across the U.S., including Colorado, Texas, Arizona, and many more. Check our coverage map to see if we serve your state.',
+  },
+  {
+    question: 'How long does it take to get coverage?',
+    answer: 'Most personal insurance policies can be set up the same day. Commercial policies may take a bit longer depending on the complexity of your business. Either way, we move fast.',
+  },
+  {
+    question: 'Do you charge a fee for your services?',
+    answer: 'No. Our services are free to you. We are compensated by the insurance carriers, so there is no additional cost for using an independent agent.',
+  },
+  {
+    question: 'What does "Veteran Owned & Operated" mean for me?',
+    answer: 'It means you are working with someone who understands discipline, service, and follow-through. Patrick brings the same commitment he gave in the military to every client relationship.',
+  },
+];
+---
+
+<BaseLayout
+  title="Patrick Henigan | Valor Insurance Group — Insurance That Works for You"
+  description="Veteran-owned independent insurance agency licensed in 28 states. Personal, commercial, and life insurance tailored to your needs. Get a real agent who answers the phone."
+>
+  <Hero />
+  <ProblemSection />
+  <GuideSection />
+  <PlanSteps />
+  <Testimonials />
+  <CoverageMap />
+  <FAQ items={homeFAQ} />
+  <CTABanner />
+  <SocialFeed compact={true} />
+</BaseLayout>

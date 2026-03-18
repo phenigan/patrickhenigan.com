@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { personalInsuranceTypes, quoteLinks } from '../data/siteData';
+
+const faqItems = [
+  {
+    question: 'What types of personal insurance do I need?',
+    answer: 'It depends on your situation, but most people benefit from homeowners (or renters) insurance, auto insurance, and an umbrella policy for extra liability protection. If you have a mortgage, homeowners insurance is required. We help you figure out exactly what you need — no more, no less.',
+  },
+  {
+    question: 'Can you help me bundle my home and auto insurance?',
+    answer: 'Absolutely. Bundling your home and auto policies is one of the easiest ways to save money. As an independent agency, we can bundle across multiple carriers to find you the best combined rate.',
+  },
+  {
+    question: 'How do I know if I have enough coverage?',
+    answer: 'Many people are underinsured without realizing it. We review your current policies, assess your assets and risks, and make sure your coverage limits actually protect you if something goes wrong.',
+  },
+  {
+    question: 'Will switching agents or carriers cancel my current policy?',
+    answer: "No. When we find you better coverage, we handle the entire transition. Your new policy starts the same day your old one ends — there's never a gap in coverage.",
+  },
+  {
+    question: 'Do you offer flood insurance?',
+    answer: "Yes. Standard homeowners policies don't cover flood damage, but we can add a separate flood policy. This is important even if you're not in a designated flood zone — over 20% of flood claims come from outside high-risk areas.",
+  },
+];
+---
+
+<BaseLayout
+  title="Personal Insurance | Valor Insurance Group — Protect What Matters Most"
+  description="Homeowners, auto, life, umbrella, and specialty personal insurance from a veteran-owned independent agency. We shop top carriers to find your best coverage and rate."
+>
+  <!-- AEO Opener -->
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Personal Insurance</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Your Home. Your Car. Your Family. Covered.</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        A personal insurance agent helps you find the right coverage for your home, vehicles, and personal belongings — all in one place. Instead of navigating confusing policies alone, you get an expert who shops across top carriers to find the best fit for your life and budget.
+      </p>
+      <div class="mt-8">
+        <a
+          href={quoteLinks.personal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+        >
+          Get Started
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Sound Familiar?</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I'm paying too much but I don't know what to change."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I'm not even sure what my policy actually covers."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I just want someone to explain this in plain English."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services grid -->
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Coverage Options</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">We cover everything under one roof — so you don't have to juggle multiple agents or companies.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {personalInsuranceTypes.map((type) => (
+          <ServiceCard name={type.name} description={type.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-step plan -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">01</div>
+          <h3 class="text-white font-bold mb-2">Tell Us About You</h3>
+          <p class="text-[#9CA3AF] text-sm">Share a few details about your home, vehicles, and what matters most to you.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">02</div>
+          <h3 class="text-white font-bold mb-2">We Find the Right Fit</h3>
+          <p class="text-[#9CA3AF] text-sm">We compare options from top carriers and present you with the best coverage and price.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">03</div>
+          <h3 class="text-white font-bold mb-2">Move Forward with Confidence</h3>
+          <p class="text-[#9CA3AF] text-sm">You get the right protection — and a real person who answers when you call.</p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a
+          href={quoteLinks.personal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get Started Today
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Personal Insurance FAQ" items={faqItems} />
+  <CTABanner />
+</BaseLayout>

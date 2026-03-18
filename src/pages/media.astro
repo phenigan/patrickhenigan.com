@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialFeed from '../components/SocialFeed.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Media & Resources | Valor Insurance Group — Insurance Tips & Education"
+  description="Watch insurance tips, educational videos, and industry updates from Patrick Henigan. YouTube, TikTok, and Instagram content to help you make smarter insurance decisions."
+>
+  <section class="pt-32 pb-8 px-4 bg-[#2D2D2D]">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Media & Resources</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Insurance Education Made Simple</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        We believe the more you understand about insurance, the better decisions you'll make. Follow along for tips, insights, and real talk about protecting what matters.
+      </p>
+    </div>
+  </section>
+
+  <SocialFeed compact={false} />
+  <CTABanner />
+</BaseLayout>

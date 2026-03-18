@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { quoteLinks } from '../data/siteData';
+
+const lifeInsuranceTypes = [
+  { name: 'Term Life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
+  { name: 'Whole Life', description: 'Permanent coverage that lasts your entire life and builds cash value over time. A foundation for long-term financial planning.' },
+  { name: 'Universal Life', description: 'Flexible permanent coverage with adjustable premiums and death benefits. Offers more control over how your policy grows.' },
+  { name: 'Final Expense', description: 'Smaller policies designed to cover funeral costs and end-of-life expenses, so your family isn\'t burdened financially.' },
+];
+
+const faqItems = [
+  {
+    question: 'How much life insurance do I need?',
+    answer: "A common rule of thumb is 10-15 times your annual income, but the real answer depends on your debts, dependents, future goals, and existing savings. We'll help you calculate the right amount based on your actual situation — not a generic formula.",
+  },
+  {
+    question: 'What is the difference between term and whole life insurance?',
+    answer: "Term life covers you for a set period (like 20 years) and is more affordable. Whole life covers you permanently and builds cash value over time, but costs more. Many people start with term and add permanent coverage as their budget allows.",
+  },
+  {
+    question: 'At what age should I get life insurance?',
+    answer: "The sooner the better — you'll never be younger or healthier than you are today, and premiums are based on age and health. Even if you're young and healthy, locking in a low rate now protects your future.",
+  },
+  {
+    question: 'Can I get life insurance if I have health issues?',
+    answer: "Yes. While health conditions can affect your rates, many carriers offer coverage for people with common health issues. We shop across multiple carriers to find options that work for your situation.",
+  },
+  {
+    question: 'How long does it take to get approved?',
+    answer: "It depends on the policy type. Some simplified-issue policies can be approved in days. Traditional underwritten policies may take 2-6 weeks. We guide you through the process and keep things moving.",
+  },
+];
+---
+
+<BaseLayout
+  title="Life Insurance | Valor Insurance Group — Protect the People Who Matter Most"
+  description="Term life, whole life, and universal life insurance from a veteran-owned independent agency. We help you find the right coverage to protect your family's future."
+>
+  <!-- AEO Opener -->
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Life Insurance</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Protect the People Who Matter Most</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        Life insurance ensures your family is financially protected if something happens to you. Whether you need coverage for a mortgage, your children's future, or retirement planning, we help you find the right policy at a price that fits your budget.
+      </p>
+      <div class="mt-8">
+        <a
+          href={quoteLinks.life}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+        >
+          Get Started
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Sound Familiar?</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I know I need life insurance but I keep putting it off."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"I have no idea how much coverage my family actually needs."</p>
+        </div>
+        <div class="bg-[#2D2D2D] rounded-lg p-5 border-l-4 border-[#B8D430]">
+          <p class="text-[#9CA3AF]">"The options are overwhelming and I don't know where to start."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services grid -->
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Coverage Options</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Life insurance doesn't have to be complicated. Here are the main types we offer.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+        {lifeInsuranceTypes.map((type) => (
+          <ServiceCard name={type.name} description={type.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-step plan -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">01</div>
+          <h3 class="text-white font-bold mb-2">Tell Us About Your Family</h3>
+          <p class="text-[#9CA3AF] text-sm">Share your situation — dependents, debts, income, and goals — so we can recommend the right coverage.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">02</div>
+          <h3 class="text-white font-bold mb-2">We Find the Right Policy</h3>
+          <p class="text-[#9CA3AF] text-sm">We compare rates and coverage from top carriers and present clear options.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-[#B8D430] mb-3">03</div>
+          <h3 class="text-white font-bold mb-2">Protect Your Family's Future</h3>
+          <p class="text-[#9CA3AF] text-sm">Lock in coverage and gain peace of mind knowing your loved ones are taken care of.</p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a
+          href={quoteLinks.life}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get Started Today
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ title="Life Insurance FAQ" items={faqItems} />
+  <CTABanner />
+</BaseLayout>
