@@ -4,11 +4,11 @@ export const siteConfig = {
   agency: 'Direct Insurance Services',
   phone: '303-994-7814',
   phoneHref: 'tel:+13039947814',
-  email: 'patrick@valorins.com',
-  emailHref: 'mailto:patrick@valorins.com',
+  email: 'patrick@valorinsurancegrp.com',
+  emailHref: 'mailto:patrick@valorinsurancegrp.com',
   site: 'https://patrickhenigan.com',
   tagline: 'Veteran Owned & Operated',
-  statesCount: 28,
+  statesCount: 27,
 };
 
 export const socialLinks = {
@@ -70,7 +70,7 @@ export const testimonials = [
 
 export const coveredStates = [
   'WA', 'OR', 'ID', 'MT', 'WY', 'UT', 'NV', 'AZ', 'CO',
-  'SD', 'MN', 'IA', 'MO', 'OK', 'TX', 'WI', 'IL', 'IN',
+  'SD', 'MN', 'IA', 'MO', 'OK', 'TX', 'WI', 'IL',
   'MI', 'OH', 'TN', 'GA', 'SC', 'NC', 'VA', 'PA', 'NJ', 'MD',
 ];
 
