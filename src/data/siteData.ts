@@ -31,6 +31,7 @@ export const navItems = [
   { label: 'Personal Insurance', href: '/personal-insurance/' },
   { label: 'Commercial Insurance', href: '/commercial-insurance/' },
   { label: 'Life Insurance', href: '/life-insurance/' },
+  { label: 'Blog', href: '/blog/' },
   { label: 'Media', href: '/media/' },
   { label: 'Contact', href: '/contact/' },
 ];

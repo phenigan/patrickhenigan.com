@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<BaseLayout
+  title="Insurance Blog | Valor Insurance Group — Tips, Guides & Resources"
+  description="Insurance tips, guides, and resources from Patrick Henigan at Valor Insurance Group. Learn about Colorado home insurance, business coverage, claims, and more."
+>
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Resources</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Insurance Blog</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        Straightforward guides, tips, and answers to the insurance questions Colorado homeowners and business owners actually ask.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-[#1a1a1a]">
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-6">
+        {posts.map((post) => (
+          <a
+            href={`/blog/${post.id}/`}
+            class="block bg-[#2D2D2D] rounded-xl border border-[#4A4A4A] hover:border-[#B8D430] p-6 md:p-8 transition-all duration-300 group"
+          >
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-wrap items-center gap-3 text-sm text-[#9CA3AF]">
+                <span>{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                {post.data.readTime && (
+                  <>
+                    <span class="text-[#4A4A4A]">·</span>
+                    <span>{post.data.readTime}</span>
+                  </>
+                )}
+              </div>
+              <h2 class="text-xl md:text-2xl font-bold text-white group-hover:text-[#B8D430] transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-[#9CA3AF] leading-relaxed">{post.data.excerpt}</p>
+              <span class="text-[#B8D430] font-medium text-sm group-hover:text-[#A6C22A] transition-colors">
+                Read More →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
