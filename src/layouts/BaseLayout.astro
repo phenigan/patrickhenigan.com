@@ -66,6 +66,7 @@ const resolvedCanonical = canonicalUrl || new URL(Astro.url.pathname, siteConfig
         })),
       })}
     />
+    <slot name="head" />
   </head>
   <body class="bg-[#1a1a1a] text-gray-100 font-sans min-h-screen flex flex-col antialiased">
     <Header />

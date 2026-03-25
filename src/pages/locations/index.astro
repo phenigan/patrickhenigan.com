@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { allLocations } from '../../data/locationData';
+---
+
+<BaseLayout
+  title="Service Areas | Valor Insurance Group — Colorado Insurance Agent"
+  description="Valor Insurance Group serves Denver, Colorado Springs, Boulder, Fort Collins, Aurora, Pueblo, Lakewood, Arvada, and communities across Colorado. Find insurance coverage for your city."
+>
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Service Areas</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Colorado Cities We Serve</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        Every city in Colorado has its own risks — hail corridors, wildfire zones, flood plains, and local industries that shape what coverage you need. Select your city to learn how we can help.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-[#333333]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {allLocations.map((loc) => (
+          <a
+            href={`/locations/${loc.slug}/`}
+            class="bg-[#2D2D2D] rounded-xl p-6 border border-[#4A4A4A] hover:border-[#B8D430] transition-all duration-300 group"
+          >
+            <h2 class="text-xl font-bold text-white group-hover:text-[#B8D430] transition-colors mb-2">{loc.name}</h2>
+            <p class="text-[#9CA3AF] text-sm leading-relaxed line-clamp-3">{loc.metaDescription}</p>
+            <span class="text-[#B8D430] font-medium text-sm mt-3 block group-hover:text-[#A6C22A] transition-colors">
+              Learn More →
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 bg-[#2D2D2D]">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-[#9CA3AF] text-lg">
+        Don't see your city? We serve all of Colorado. <a href="/contact/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium">Contact us</a> or call <a href="tel:+13039947814" class="text-[#B8D430] hover:text-[#A6C22A] font-medium">303-994-7814</a> for coverage anywhere in the state.
+      </p>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>
