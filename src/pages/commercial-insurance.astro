@@ -3,7 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import FAQ from '../components/FAQ.astro';
 import CTABanner from '../components/CTABanner.astro';
-import { commercialInsuranceTypes, quoteLinks } from '../data/siteData';
+import { commercialInsuranceTypes, quoteLinks, siteConfig } from '../data/siteData';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.site },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Insurance', item: `${siteConfig.site}/commercial-insurance/` },
+  ],
+};
 
 const faqItems = [
   {
@@ -33,6 +42,7 @@ const faqItems = [
   title="Commercial Insurance | Valor Insurance Group — Protect Your Business"
   description="Commercial auto, general liability, workers comp, and more. Veteran-owned independent insurance agency that shops top carriers for your business coverage needs."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <!-- AEO Opener -->
   <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
     <div class="max-w-4xl mx-auto text-center">

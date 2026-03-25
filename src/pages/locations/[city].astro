@@ -18,6 +18,16 @@ const { name, slug, metaDescription, intro, personalIntro, personalHighlights, c
 const relevantPersonal = personalInsuranceTypes.filter((t) => personalHighlights.includes(t.name));
 const relevantCommercial = commercialInsuranceTypes.filter((t) => commercialHighlights.includes(t.name));
 const pageUrl = `${siteConfig.site}/locations/${slug}/`;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.site },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${siteConfig.site}/locations/` },
+    { '@type': 'ListItem', position: 3, name: name, item: pageUrl },
+  ],
+};
 ---
 
 <BaseLayout
@@ -45,6 +55,7 @@ const pageUrl = `${siteConfig.site}/locations/${slug}/`;
       },
     })}
   />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <!-- Hero -->
   <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">

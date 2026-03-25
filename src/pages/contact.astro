@@ -1,12 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
+import { siteConfig } from '../data/siteData';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['InsuranceAgency', 'LocalBusiness'],
+  name: siteConfig.business,
+  founder: { '@type': 'Person', name: 'Patrick Henigan' },
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  url: siteConfig.site,
+  openingHours: 'Mo-Fr 08:00-18:00',
+  priceRange: 'Free consultation',
+  areaServed: 'Colorado',
+  hasMap: `${siteConfig.site}/contact`,
+  // TODO: Add address when ready — { '@type': 'PostalAddress', streetAddress: '', addressLocality: '', addressRegion: 'CO', postalCode: '', addressCountry: 'US' }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.site },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${siteConfig.site}/contact/` },
+  ],
+};
 ---
 
 <BaseLayout
   title="Contact Patrick Henigan | Valor Insurance Group — Get in Touch"
   description="Contact Patrick Henigan at Valor Insurance Group. Call 303-994-7814, email patrick@valorinsurancegrp.com, or fill out our contact form. Licensed in 27 states."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <section class="pt-32 pb-8 px-4 bg-[#2D2D2D]">
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Contact Us</span>

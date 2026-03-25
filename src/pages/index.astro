@@ -9,6 +9,7 @@ import CoverageMap from '../components/CoverageMap.astro';
 import FAQ from '../components/FAQ.astro';
 import CTABanner from '../components/CTABanner.astro';
 import SocialFeed from '../components/SocialFeed.astro';
+import { siteConfig } from '../data/siteData';
 
 const homeFAQ = [
   {
@@ -21,7 +22,11 @@ const homeFAQ = [
   },
   {
     question: 'What states do you serve?',
-    answer: 'We are currently licensed in 27 states across the U.S., including Colorado, Texas, Arizona, and many more. Check our coverage map to see if we serve your state.',
+    answer: 'We are licensed in 27 states including Colorado, Texas, Arizona, and more. Check our coverage map or call 303-994-7814 to find out if we serve your state.',
+  },
+  {
+    question: 'How do I get a quote?',
+    answer: 'Call 303-994-7814 or visit our contact page. Most quotes are same-day — we move fast so you can get covered quickly.',
   },
   {
     question: 'How long does it take to get coverage?',
@@ -35,13 +40,79 @@ const homeFAQ = [
     question: 'What does "Veteran Owned & Operated" mean for me?',
     answer: 'It means you are working with someone who understands discipline, service, and follow-through. Patrick brings the same commitment he gave in the military to every client relationship.',
   },
+  {
+    question: 'What is a wind/hail deductible?',
+    answer: "A percentage-based deductible calculated on your home's insured value, not the damage amount. On a $350,000 home with a 2% deductible, that's $7,000 before your insurer pays a cent.",
+  },
+  {
+    question: 'What is an ACV roof endorsement?',
+    answer: 'Actual Cash Value means the insurer pays the depreciated value of your roof, not replacement cost. A 10-year-old roof can have 40-50% depreciation applied before payout.',
+  },
+  {
+    question: 'Do I need flood insurance in Colorado?',
+    answer: 'Standard homeowners policies do NOT cover flooding. Separate flood insurance through NFIP or a private carrier is required if you\'re in a flood zone and recommended for most Colorado properties.',
+  },
 ];
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Patrick Henigan',
+  jobTitle: 'Independent Insurance Agent',
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  url: siteConfig.site,
+  worksFor: {
+    '@type': 'InsuranceAgency',
+    name: siteConfig.business,
+  },
+  knowsAbout: ['Home Insurance', 'Auto Insurance', 'Business Insurance', 'Life Insurance', 'Flood Insurance', 'Colorado Insurance'],
+  description: 'Veteran-owned independent insurance agent licensed in 27 states. Specializes in personal, commercial, and life insurance in Colorado.',
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['InsuranceAgency', 'LocalBusiness'],
+  name: siteConfig.business,
+  founder: { '@type': 'Person', name: 'Patrick Henigan' },
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  url: siteConfig.site,
+  openingHours: 'Mo-Fr 08:00-18:00',
+  priceRange: 'Free consultation',
+  areaServed: 'Colorado',
+  hasMap: `${siteConfig.site}/contact`,
+  // TODO: Add address when ready — { '@type': 'PostalAddress', streetAddress: '', addressLocality: '', addressRegion: 'CO', postalCode: '', addressCountry: 'US' }
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '50', // TODO: Update reviewCount to match actual Google review count
+    bestRating: '5',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFAQ.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 ---
 
 <BaseLayout
   title="Patrick Henigan | Valor Insurance Group — Insurance That Works for You"
   description="Veteran-owned independent insurance agency licensed in 27 states. Personal, commercial, and life insurance tailored to your needs. Get a real agent who answers the phone."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <Hero />
   <ProblemSection />
   <GuideSection />

@@ -2,12 +2,23 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTABanner from '../../components/CTABanner.astro';
 import { allLocations } from '../../data/locationData';
+import { siteConfig } from '../../data/siteData';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.site },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${siteConfig.site}/locations/` },
+  ],
+};
 ---
 
 <BaseLayout
   title="Service Areas | Valor Insurance Group — Colorado Insurance Agent"
   description="Valor Insurance Group serves Denver, Colorado Springs, Boulder, Fort Collins, Aurora, Pueblo, Lakewood, Arvada, and communities across Colorado. Find insurance coverage for your city."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Service Areas</span>

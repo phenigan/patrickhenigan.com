@@ -3,7 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import FAQ from '../components/FAQ.astro';
 import CTABanner from '../components/CTABanner.astro';
-import { quoteLinks } from '../data/siteData';
+import { quoteLinks, siteConfig } from '../data/siteData';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.site },
+    { '@type': 'ListItem', position: 2, name: 'Life Insurance', item: `${siteConfig.site}/life-insurance/` },
+  ],
+};
 
 const lifeInsuranceTypes = [
   { name: 'Term Life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
@@ -40,6 +49,7 @@ const faqItems = [
   title="Life Insurance | Valor Insurance Group — Protect the People Who Matter Most"
   description="Term life, whole life, and universal life insurance from a veteran-owned independent agency. We help you find the right coverage to protect your family's future."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <!-- AEO Opener -->
   <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
     <div class="max-w-4xl mx-auto text-center">
