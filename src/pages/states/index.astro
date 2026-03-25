@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { stateDetails } from '../../data/stateData';
+
+const sortedStates = Object.entries(stateDetails)
+  .map(([code, state]) => ({ code, ...state }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout
+  title="Insurance by State | Valor Insurance Group — Licensed in 27 States"
+  description="Valor Insurance Group is licensed in 27 states across the U.S. Find insurance coverage information for your state. Personal, commercial, and life insurance from a veteran-owned independent agency."
+>
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">Coverage Across America</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Insurance by State</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        We're licensed in {sortedStates.length} states and growing. Select your state to learn about coverage options and risks specific to where you live.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-[#333333]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {sortedStates.map((state) => (
+          <a
+            href={`/states/${state.slug}/`}
+            class="bg-[#2D2D2D] rounded-lg p-5 border border-[#4A4A4A] hover:border-[#B8D430] transition-all duration-300 group"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-[#B8D430] font-bold text-lg group-hover:text-[#A6C22A] transition-colors">{state.code}</span>
+              <div>
+                <h2 class="text-white font-semibold group-hover:text-[#B8D430] transition-colors">{state.name}</h2>
+                <p class="text-[#9CA3AF] text-xs">{state.nickname}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</BaseLayout>

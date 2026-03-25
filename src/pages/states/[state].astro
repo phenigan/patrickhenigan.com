@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { quoteLinks, personalInsuranceTypes, commercialInsuranceTypes } from '../../data/siteData';
+import { stateDetails } from '../../data/stateData';
+
+export function getStaticPaths() {
+  return Object.entries(stateDetails).map(([code, state]) => ({
+    params: { state: state.slug },
+    props: { code, ...state },
+  }));
+}
+
+const { code, name, nickname, topConcerns, personalHighlights, commercialHighlights, metaDescription } = Astro.props;
+
+const relevantPersonal = personalInsuranceTypes.filter(t => personalHighlights.includes(t.name));
+const relevantCommercial = commercialInsuranceTypes.filter(t => commercialHighlights.includes(t.name));
+
+const faqItems = [
+  {
+    question: `What types of insurance do I need in ${name}?`,
+    answer: `It depends on your situation, but most ${name} residents benefit from homeowners (or renters) insurance, auto insurance, and an umbrella policy for extra liability protection. We help you figure out exactly what coverage makes sense for your life in ${name} — no more, no less.`,
+  },
+  {
+    question: `How do I get an insurance quote in ${name}?`,
+    answer: `It's easy. Click "Get Started" on this page to fill out a short form, or call us at 303-994-7814. As an independent agency licensed in ${name}, we compare rates from dozens of top carriers to find you the best coverage and price.`,
+  },
+  {
+    question: `Do you offer flood insurance in ${name}?`,
+    answer: `Yes. Standard homeowners policies don't cover flood damage, and flooding can happen anywhere — not just in designated flood zones. We can add a separate flood policy to make sure you're fully protected in ${name}.`,
+  },
+];
+---
+
+<BaseLayout
+  title={`Insurance in ${name} | Valor Insurance Group`}
+  description={metaDescription}
+>
+  <!-- Hero -->
+  <section class="pt-32 pb-12 px-4 bg-[#2D2D2D] mountain-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[#B8D430] text-sm font-semibold tracking-widest uppercase">{nickname}</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Insurance Coverage in {name}</h1>
+      <p class="text-[#9CA3AF] text-lg max-w-3xl mx-auto leading-relaxed">
+        An independent insurance agent who shops top carriers to find the best coverage and rate for your home, vehicles, business, and family in {name}.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={quoteLinks.personal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+        >
+          Get Started
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Concerns -->
+  <section class="py-16 px-4 bg-[#333333]">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Why {name} Residents Need the Right Insurance</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {topConcerns.map((concern) => (
+          <div class="bg-[#2D2D2D] rounded-lg p-6 border-l-4 border-[#B8D430]">
+            <h3 class="text-white font-bold mb-3">{concern.title}</h3>
+            <p class="text-[#9CA3AF] text-sm leading-relaxed">{concern.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Insurance -->
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Personal Insurance in {name}</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Coverage tailored to the risks and needs of {name} residents.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {relevantPersonal.map((type) => (
+          <ServiceCard name={type.name} description={type.description} />
+        ))}
+      </div>
+      <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href={quoteLinks.personal}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get a Personal Quote
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="/personal-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
+          See All Personal Coverage →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Insurance -->
+  <section class="py-20 px-4 bg-[#333333]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Commercial Insurance in {name}</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Protect your {name} business with coverage built around your operations.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {relevantCommercial.map((type) => (
+          <ServiceCard name={type.name} description={type.description} />
+        ))}
+      </div>
+      <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href={quoteLinks.commercial}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get a Commercial Quote
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="/commercial-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
+          See All Commercial Coverage →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Life Insurance -->
+  <section class="py-16 px-4 bg-[#2D2D2D]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Life Insurance in {name}</h2>
+      <p class="text-[#9CA3AF] max-w-2xl mx-auto mb-8">
+        Protect your family's future with term, whole, or universal life insurance. We help {name} residents find the right life coverage at the right price.
+      </p>
+      <a href="/life-insurance/" class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors">
+        Explore Life Insurance
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <FAQ title={`${name} Insurance FAQ`} items={faqItems} />
+  <CTABanner />
+</BaseLayout>

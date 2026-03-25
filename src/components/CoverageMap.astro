@@ -1,21 +1,11 @@
 ---
 import { coveredStates } from '../data/siteData';
-
-const stateNames = {
-  AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California',
-  CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
-  HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa',
-  KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland',
-  MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri',
-  MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey',
-  NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio',
-  OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina',
-  SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont',
-  VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming',
-  DC: 'District of Columbia',
-};
+import { stateNames, stateDetails } from '../data/stateData';
 
 const coveredSet = new Set(coveredStates);
+const slugMap = Object.fromEntries(
+  Object.entries(stateDetails).map(([code, s]) => [code, s.slug])
+);
 ---
 
 <section class="py-20 px-4 bg-[#1a1a2e]" id="coverage">
@@ -97,7 +87,13 @@ const coveredSet = new Set(coveredStates);
           <span class="text-[#9CA3AF] text-sm">Not Yet</span>
         </div>
       </div>
+      <div class="text-center mt-6">
+        <a href="/states/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
+          View All States →
+        </a>
+      </div>
     </div>
+    <div class="hidden" data-state-names={JSON.stringify(stateNames)} data-slug-map={JSON.stringify(slugMap)} data-covered={JSON.stringify(coveredStates)}></div>
   </div>
 </section>
 
@@ -121,36 +117,54 @@ const coveredSet = new Set(coveredStates);
   }
   .state-path {
     transition: fill 0.2s ease, opacity 0.2s ease;
+    cursor: default;
+  }
+  .state-path.covered {
     cursor: pointer;
   }
-  .state-path:hover {
+  .state-path.covered:hover {
     opacity: 0.8;
   }
 </style>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
-    const tooltip = document.querySelector('.state-tooltip');
+  let mapInitialized = false;
+  function initMap() {
+    if (mapInitialized) return;
+    mapInitialized = true;
+    const tooltip = document.querySelector('.state-tooltip') as HTMLElement | null;
     const mapWrapper = document.querySelector('.map-wrapper');
     if (!tooltip || !mapWrapper) return;
+
+    const dataEl = mapWrapper.closest('section')?.querySelector('[data-slug-map]');
+    const stateNamesMap: Record<string, string> = dataEl ? JSON.parse(dataEl.getAttribute('data-state-names') || '{}') : {};
+    const slugMap: Record<string, string> = dataEl ? JSON.parse(dataEl.getAttribute('data-slug-map') || '{}') : {};
+    const coveredSet = new Set<string>(dataEl ? JSON.parse(dataEl.getAttribute('data-covered') || '[]') : []);
 
     const paths = document.querySelectorAll('.state-path');
 
     paths.forEach((path) => {
       const titleEl = path.querySelector('title');
-      const stateName = titleEl ? titleEl.textContent : '';
+      const stateCode = titleEl ? titleEl.textContent?.trim() || '' : '';
+      const isCovered = coveredSet.has(stateCode);
+      const fullName = stateNamesMap[stateCode] || stateCode;
+
+      if (isCovered) {
+        path.classList.add('covered');
+      }
 
       path.addEventListener('mouseenter', () => {
-        if (stateName) {
-          tooltip.textContent = stateName;
+        if (stateCode) {
+          tooltip.textContent = isCovered ? fullName : `${fullName} — Not Yet`;
           tooltip.style.display = 'block';
         }
       });
 
-      path.addEventListener('mousemove', (e) => {
+      path.addEventListener('mousemove', (e: Event) => {
+        const mouseEvent = e as MouseEvent;
         const rect = mapWrapper.getBoundingClientRect();
-        const x = e.clientX - rect.left + 12;
-        const y = e.clientY - rect.top - 30;
+        const x = mouseEvent.clientX - rect.left + 12;
+        const y = mouseEvent.clientY - rect.top - 30;
         tooltip.style.left = x + 'px';
         tooltip.style.top = y + 'px';
       });
@@ -158,6 +172,18 @@ const coveredSet = new Set(coveredStates);
       path.addEventListener('mouseleave', () => {
         tooltip.style.display = 'none';
       });
+
+      if (isCovered && slugMap[stateCode]) {
+        path.addEventListener('click', () => {
+          window.location.href = `/states/${slugMap[stateCode]}/`;
+        });
+      }
     });
-  });
+  }
+  document.addEventListener('astro:page-load', initMap);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    initMap();
+  }
 </script>
