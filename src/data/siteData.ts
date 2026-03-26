@@ -20,7 +20,7 @@ export const socialLinks = {
 };
 
 export const quoteLinks = {
-  personal: 'https://quoteforms.app/direct-insurance-services-llc/forms/a0d430a0-8944-4589-9552-349e78539d7c/respond',
+  personal: '/quote/personal/',
   commercial: 'https://directinsservices.com/business-insurance-quote/?choose_agent=phenigan@directinsservices.com',
   life: '#', // TBD
 };
@@ -31,7 +31,6 @@ export const navItems = [
   { label: 'Personal Insurance', href: '/personal-insurance/' },
   { label: 'Commercial Insurance', href: '/commercial-insurance/' },
   { label: 'Life Insurance', href: '/life-insurance/' },
-  { label: 'Service Areas', href: '/locations/' },
   { label: 'Media', href: '/media/' },
   { label: 'Contact', href: '/contact/' },
 ];
