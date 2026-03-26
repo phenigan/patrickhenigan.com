@@ -22,7 +22,7 @@ export const socialLinks = {
 export const quoteLinks = {
   personal: '/quote/personal/',
   commercial: 'https://directinsservices.com/business-insurance-quote/?choose_agent=phenigan@directinsservices.com',
-  life: '#', // TBD
+  life: '/quote/life/',
 };
 
 export const navItems = [
