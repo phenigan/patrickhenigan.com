@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import FAQ from '../components/FAQ.astro';
-import CTABanner from '../components/CTABanner.astro';
-import { quoteLinks, siteConfig } from '../data/siteData';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { quoteLinks, siteConfig } from '../../data/siteData';
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -15,10 +15,10 @@ const breadcrumbSchema = {
 };
 
 const lifeInsuranceTypes = [
-  { name: 'Term Life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
-  { name: 'Whole Life', description: 'Permanent coverage that lasts your entire life and builds cash value over time. A foundation for long-term financial planning.' },
-  { name: 'Universal Life', description: 'Flexible permanent coverage with adjustable premiums and death benefits. Offers more control over how your policy grows.' },
-  { name: 'Final Expense', description: 'Smaller policies designed to cover funeral costs and end-of-life expenses, so your family isn\'t burdened financially.' },
+  { name: 'Term Life', slug: 'term-life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
+  { name: 'Whole Life', slug: 'whole-life', description: 'Permanent coverage that lasts your entire life and builds cash value over time. A foundation for long-term financial planning.' },
+  { name: 'Universal Life', slug: 'universal-life', description: 'Flexible permanent coverage with adjustable premiums and death benefits. Offers more control over how your policy grows.' },
+  { name: 'Final Expense', slug: 'final-expense', description: 'Smaller policies designed to cover funeral costs and end-of-life expenses, so your family isn\'t burdened financially.' },
 ];
 
 const faqItems = [
@@ -100,7 +100,7 @@ const faqItems = [
       </div>
       <div class="grid sm:grid-cols-2 gap-6">
         {lifeInsuranceTypes.map((type) => (
-          <ServiceCard name={type.name} description={type.description} />
+          <ServiceCard name={type.name} description={type.description} href={`/life-insurance/${type.slug}/`} />
         ))}
       </div>
     </div>

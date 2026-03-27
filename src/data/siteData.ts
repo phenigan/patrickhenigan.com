@@ -75,24 +75,24 @@ export const coveredStates = [
 ];
 
 export const personalInsuranceTypes = [
-  { name: 'Homeowners', icon: 'home', description: 'Protect your biggest investment with coverage tailored to your home and belongings.' },
-  { name: 'Auto', icon: 'car', description: 'Get the right coverage for your vehicles without overpaying.' },
-  { name: 'Condo', icon: 'building', description: 'Coverage designed specifically for condo owners and their unique needs.' },
-  { name: 'Renters', icon: 'key', description: "Protect your personal property even if you don't own the building." },
-  { name: 'Motorcycle', icon: 'motorcycle', description: 'Specialized coverage for your bike, whether it\'s your daily ride or weekend escape.' },
-  { name: 'Boat & Watercraft', icon: 'anchor', description: 'Coverage for your boat, jet ski, or other watercraft.' },
-  { name: 'Recreational Vehicle', icon: 'rv', description: 'Hit the road with confidence knowing your RV is properly covered.' },
-  { name: 'Flood', icon: 'water', description: "Standard policies don't cover floods. We'll make sure you're protected." },
-  { name: 'High Net Worth', icon: 'shield', description: 'Specialized coverage for high-value homes, collections, and assets.' },
-  { name: 'Umbrella / Excess', icon: 'umbrella', description: 'Extra liability protection that goes beyond your other policies.' },
-  { name: 'Course of Construction', icon: 'construction', description: 'Coverage for your property while it\'s being built or renovated.' },
+  { name: 'Homeowners', slug: 'homeowners', icon: 'home', description: 'Protect your biggest investment with coverage tailored to your home and belongings.' },
+  { name: 'Auto', slug: 'auto', icon: 'car', description: 'Get the right coverage for your vehicles without overpaying.' },
+  { name: 'Condo', slug: 'condo', icon: 'building', description: 'Coverage designed specifically for condo owners and their unique needs.' },
+  { name: 'Renters', slug: 'renters', icon: 'key', description: "Protect your personal property even if you don't own the building." },
+  { name: 'Motorcycle', slug: 'motorcycle', icon: 'motorcycle', description: 'Specialized coverage for your bike, whether it\'s your daily ride or weekend escape.' },
+  { name: 'Boat & Watercraft', slug: 'boat-watercraft', icon: 'anchor', description: 'Coverage for your boat, jet ski, or other watercraft.' },
+  { name: 'Recreational Vehicle', slug: 'recreational-vehicle', icon: 'rv', description: 'Hit the road with confidence knowing your RV is properly covered.' },
+  { name: 'Flood', slug: 'flood', icon: 'water', description: "Standard policies don't cover floods. We'll make sure you're protected." },
+  { name: 'High Net Worth', slug: 'high-net-worth', icon: 'shield', description: 'Specialized coverage for high-value homes, collections, and assets.' },
+  { name: 'Umbrella / Excess', slug: 'umbrella-excess', icon: 'umbrella', description: 'Extra liability protection that goes beyond your other policies.' },
+  { name: 'Course of Construction', slug: 'course-of-construction', icon: 'construction', description: 'Coverage for your property while it\'s being built or renovated.' },
 ];
 
 export const commercialInsuranceTypes = [
-  { name: 'Commercial Auto', icon: 'truck', description: 'Coverage for your business vehicles and fleet.' },
-  { name: 'General Liability', icon: 'shield', description: 'Protect your business from third-party claims of injury or damage.' },
-  { name: 'Workers Compensation', icon: 'users', description: "Take care of your employees if they're injured on the job." },
-  { name: 'Commercial Property', icon: 'building', description: 'Protect your business property, equipment, and inventory.' },
-  { name: 'Professional Liability', icon: 'briefcase', description: 'Coverage for errors, omissions, and professional mistakes.' },
-  { name: 'Commercial Umbrella', icon: 'umbrella', description: 'Extra liability coverage that extends beyond your other business policies.' },
+  { name: 'Commercial Auto', slug: 'commercial-auto', icon: 'truck', description: 'Coverage for your business vehicles and fleet.' },
+  { name: 'General Liability', slug: 'general-liability', icon: 'shield', description: 'Protect your business from third-party claims of injury or damage.' },
+  { name: 'Workers Compensation', slug: 'workers-compensation', icon: 'users', description: "Take care of your employees if they're injured on the job." },
+  { name: 'Commercial Property', slug: 'commercial-property', icon: 'building', description: 'Protect your business property, equipment, and inventory.' },
+  { name: 'Professional Liability', slug: 'professional-liability', icon: 'briefcase', description: 'Coverage for errors, omissions, and professional mistakes.' },
+  { name: 'Commercial Umbrella', slug: 'commercial-umbrella', icon: 'umbrella', description: 'Extra liability coverage that extends beyond your other business policies.' },
 ];

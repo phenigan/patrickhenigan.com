@@ -114,7 +114,7 @@ const breadcrumbSchema = {
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {relevantPersonal.map((type) => (
-          <ServiceCard name={type.name} description={type.description} />
+          <ServiceCard name={type.name} description={type.description} href={`/personal-insurance/${type.slug}/`} />
         ))}
       </div>
       <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -144,7 +144,7 @@ const breadcrumbSchema = {
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {relevantCommercial.map((type) => (
-          <ServiceCard name={type.name} description={type.description} />
+          <ServiceCard name={type.name} description={type.description} href={`/commercial-insurance/${type.slug}/`} />
         ))}
       </div>
       <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">

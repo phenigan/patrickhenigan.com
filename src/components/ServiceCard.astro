@@ -2,17 +2,35 @@
 interface Props {
   name: string;
   description: string;
+  href?: string;
 }
 
-const { name, description } = Astro.props;
+const { name, description, href } = Astro.props;
+const Tag = href ? 'a' : 'div';
 ---
 
-<div class="bg-[#2D2D2D] rounded-xl p-6 border border-[#4A4A4A] hover:border-[#B8D430] transition-all duration-300 group">
-  <div class="w-10 h-10 bg-[#B8D430]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#B8D430]/20 transition-colors">
-    <svg class="w-5 h-5 text-[#B8D430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-    </svg>
+{href ? (
+  <a href={href} class="block bg-[#2D2D2D] rounded-xl p-6 border border-[#4A4A4A] hover:border-[#B8D430] transition-all duration-300 group cursor-pointer">
+    <div class="w-10 h-10 bg-[#B8D430]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#B8D430]/20 transition-colors">
+      <svg class="w-5 h-5 text-[#B8D430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    </div>
+    <h3 class="text-white font-bold text-lg mb-2 group-hover:text-[#B8D430] transition-colors">{name}</h3>
+    <p class="text-[#9CA3AF] text-sm leading-relaxed">{description}</p>
+    <span class="inline-flex items-center gap-1 text-[#B8D430] text-sm font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+      Learn more
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </span>
+  </a>
+) : (
+  <div class="bg-[#2D2D2D] rounded-xl p-6 border border-[#4A4A4A] hover:border-[#B8D430] transition-all duration-300 group">
+    <div class="w-10 h-10 bg-[#B8D430]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#B8D430]/20 transition-colors">
+      <svg class="w-5 h-5 text-[#B8D430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    </div>
+    <h3 class="text-white font-bold text-lg mb-2">{name}</h3>
+    <p class="text-[#9CA3AF] text-sm leading-relaxed">{description}</p>
   </div>
-  <h3 class="text-white font-bold text-lg mb-2">{name}</h3>
-  <p class="text-[#9CA3AF] text-sm leading-relaxed">{description}</p>
-</div>
+)}

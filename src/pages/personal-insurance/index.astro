@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import FAQ from '../components/FAQ.astro';
-import CTABanner from '../components/CTABanner.astro';
-import { personalInsuranceTypes, quoteLinks, siteConfig } from '../data/siteData';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { personalInsuranceTypes, quoteLinks, siteConfig } from '../../data/siteData';
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -93,7 +93,7 @@ const faqItems = [
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {personalInsuranceTypes.map((type) => (
-          <ServiceCard name={type.name} description={type.description} />
+          <ServiceCard name={type.name} description={type.description} href={`/personal-insurance/${type.slug}/`} />
         ))}
       </div>
     </div>
