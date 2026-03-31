@@ -24,7 +24,7 @@ Let's fix that.
 
 ## The Insurance Every Colorado Business Should Consider
 
-### 1. General Liability Insurance
+### 1. [General Liability Insurance](/commercial-insurance/general-liability/)
 
 **What it covers:** Third-party claims of bodily injury, property damage, and personal/advertising injury. If a customer slips and falls at your location, if your work damages someone's property, or if you're accused of slander in your advertising — general liability covers it.
 
@@ -34,7 +34,7 @@ Let's fix that.
 
 **Colorado note:** Many commercial leases and client contracts in Colorado require proof of general liability insurance with specific minimum limits (often $1 million per occurrence / $2 million aggregate).
 
-### 2. Workers Compensation Insurance
+### 2. [Workers Compensation Insurance](/commercial-insurance/workers-compensation/)
 
 **What it covers:** Medical expenses, lost wages, and rehabilitation costs for employees who are injured or become ill on the job.
 
@@ -44,7 +44,7 @@ Let's fix that.
 
 **Colorado note:** Colorado workers comp is administered through private carriers (not a state fund). Rates are regulated by the Colorado Division of Insurance, but carriers can offer credits and discounts. An independent agent can help you find the most competitive rate for your classification.
 
-### 3. Commercial Property Insurance
+### 3. [Commercial Property Insurance](/commercial-insurance/commercial-property/)
 
 **What it covers:** Your business property — building (if you own it), equipment, inventory, furniture, computers, and supplies — against fire, theft, vandalism, and certain weather events.
 
@@ -60,7 +60,7 @@ Let's fix that.
 
 **Why it's popular:** It's usually 15-30% cheaper than buying general liability and commercial property separately. Many BOPs also include business income coverage (pays for lost revenue if you can't operate due to a covered loss).
 
-### 5. Commercial Auto Insurance
+### 5. [Commercial Auto Insurance](/commercial-insurance/commercial-auto/)
 
 **What it covers:** Vehicles used for business purposes — company-owned trucks, vans, cars, or employee vehicles used for business errands.
 
@@ -68,13 +68,13 @@ Let's fix that.
 
 **Colorado note:** Colorado's high uninsured motorist rate and severe weather conditions (hail, ice) make adequate commercial auto coverage especially important here.
 
-### 6. Professional Liability (Errors & Omissions)
+### 6. [Professional Liability](/commercial-insurance/professional-liability/) (Errors & Omissions)
 
 **What it covers:** Claims that your professional services caused financial harm to a client due to errors, omissions, negligence, or failure to deliver promised results.
 
 **Who needs it:** Consultants, IT professionals, accountants, real estate agents, architects, engineers, financial advisors — anyone who provides professional advice or services.
 
-### 7. Commercial Umbrella Insurance
+### 7. [Commercial Umbrella Insurance](/commercial-insurance/commercial-umbrella/)
 
 **What it covers:** Extra liability coverage above your general liability, commercial auto, and workers comp policies. If a claim exceeds your underlying policy limits, the umbrella kicks in.
 
@@ -119,7 +119,7 @@ If you answered yes to #1 and #2 or #3, a **BOP + workers comp** is probably you
 
 ## Bottom Line
 
-Business insurance doesn't have to be complicated or expensive. The key is getting the right coverage for your specific situation — no more, no less. An independent agent can help you build a program that protects your business without wasting money on coverage you don't need.
+Business insurance doesn't have to be complicated or expensive. The key is getting the right coverage for your specific situation — no more, no less. An [independent agent](/blog/independent-vs-captive-insurance-agent/) can help you build a program that protects your business without wasting money on coverage you don't need. Explore all our [commercial insurance](/commercial-insurance/) options to find the right fit.
 
 ---
 

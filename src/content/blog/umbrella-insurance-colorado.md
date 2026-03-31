@@ -28,7 +28,7 @@ An umbrella insurance policy provides **extra liability coverage** above and bey
 
 Here's how it works:
 
-Your homeowners policy might have $300,000 in liability coverage. Your auto policy might have $250,000 per person / $500,000 per accident. Those sound like big numbers — until they're not.
+Your [homeowners policy](/personal-insurance/homeowners/) might have $300,000 in liability coverage. Your [auto policy](/personal-insurance/auto/) might have $250,000 per person / $500,000 per accident. Those sound like big numbers — until they're not.
 
 If someone gets seriously injured on your property or in a car accident you cause, medical bills and legal judgments can easily exceed those limits. When they do, **you're personally responsible for the difference**. That means your savings, your home equity, your investments, and even your future earnings are at risk.
 
@@ -63,7 +63,7 @@ In each of these cases, the umbrella policy saved the family from financial deva
 ## What It Doesn't Cover
 
 - Your own injuries or property damage
-- Business-related liability (you need commercial insurance for that)
+- Business-related liability (you need [commercial insurance](/commercial-insurance/) for that)
 - Intentional acts or criminal behavior
 - Contractual liability
 - Workers compensation claims
@@ -118,7 +118,7 @@ The whole process usually takes one phone call and adds minimal cost to your ove
 
 An umbrella policy is cheap, powerful, and protects you from the kind of worst-case scenario that can change your family's financial future overnight. For $15-25 a month, there's really no reason not to have one.
 
-If you're not sure how much coverage you need, or if your current policies meet the requirements for an umbrella, give us a call. We'll review your situation and set you up the right way.
+If you're not sure how much coverage you need, or if your current policies meet the requirements for an umbrella, give us a call. Learn more about [umbrella/excess liability insurance](/personal-insurance/umbrella-excess/) or check out our full [personal insurance](/personal-insurance/) options. We'll review your situation and set you up the right way.
 
 ---
 

@@ -26,7 +26,7 @@ If you own a home in Colorado, wildfire risk is something you need to understand
 
 ## What Your Homeowners Policy Covers
 
-Standard homeowners insurance includes fire coverage, and that includes wildfire. Here's what's typically covered:
+Standard [homeowners insurance](/personal-insurance/homeowners/) includes fire coverage, and that includes wildfire. Here's what's typically covered:
 
 - **Dwelling coverage** — Damage to your home's structure from fire
 - **Other structures** — Detached garages, sheds, fences damaged by fire
@@ -90,7 +90,7 @@ Beyond defensible space, you may qualify for discounts by:
 
 Some Colorado homeowners in high-risk wildfire areas have struggled to find coverage as major carriers have pulled back from certain zones. If you're in this situation:
 
-**1. Work with an independent agent.** We have access to carriers and surplus lines insurers that specialize in harder-to-place risks. Options exist — they're just not always with the big brand-name carriers.
+**1. Work with an [independent agent](/blog/independent-vs-captive-insurance-agent/).** We have access to carriers and surplus lines insurers that specialize in harder-to-place risks. Options exist — they're just not always with the big brand-name carriers.
 
 **2. Colorado FAIR Plan.** Colorado has a FAIR Plan (Fair Access to Insurance Requirements) that provides basic property insurance for homeowners who can't find coverage in the standard market. It's coverage of last resort — premiums are higher and coverage may be more limited — but it ensures you're not left without any protection.
 
@@ -102,13 +102,13 @@ Whether you're in a known wildfire area or not, here's what every Colorado homeo
 
 1. **Review your ALE limits.** Make sure your additional living expenses coverage is enough to sustain your family for 12-24 months if needed.
 2. **Check for ordinance or law coverage.** This endorsement is inexpensive and critical for rebuilding to current codes.
-3. **Document your belongings.** Take a video walk-through of your home and store it in the cloud. This makes the claims process much smoother.
+3. **Document your belongings.** Take a video walk-through of your home and store it in the cloud. This makes the [claims process](/blog/home-insurance-claim-colorado/) much smoother.
 4. **Create and maintain defensible space.** Even in suburban areas, basic vegetation management reduces your risk.
 5. **Talk to your agent annually.** Wildfire risk and carrier appetite change every year. An annual review keeps you ahead of the curve.
 
 ## Bottom Line
 
-Wildfire risk in Colorado is not going away — it's growing. The good news is that proper insurance coverage and proactive mitigation can protect you and your family. The key is understanding what you have, what you need, and where the gaps are.
+Wildfire risk in Colorado is not going away — it's growing. The good news is that proper insurance coverage and proactive mitigation can protect you and your family. You should also understand [how much home insurance costs in Colorado](/blog/home-insurance-cost-colorado/) and whether you need separate [flood insurance](/blog/flood-insurance-colorado/) — especially if you're near a burn scar area. The key is understanding what you have, what you need, and where the gaps are.
 
 If you're concerned about wildfire coverage — or if you've been told you can't get insurance in your area — reach out. We specialize in finding solutions for Colorado homeowners, even in challenging risk zones.
 

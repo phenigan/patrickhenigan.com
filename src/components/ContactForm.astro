@@ -16,17 +16,53 @@ import { siteConfig, socialLinks, quoteLinks } from '../data/siteData';
     <div class="grid md:grid-cols-2 gap-12">
       <!-- Contact Form -->
       <div>
-        <form class="space-y-5" id="contact-form" action="#" method="POST">
+        <form class="space-y-5" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="6d8b0eb5-2cdf-4645-9a78-fd2ad9be0755" />
+          <input type="hidden" name="from_name" value="Patrick Henigan – Valor Insurance Group" />
+          <input type="hidden" name="subject" id="form-subject" value="New Quote Request" />
+          <input type="hidden" name="replyto" id="form-replyto" value="" />
+
+          <!-- Honeypot -->
+          <div style="display:none !important" aria-hidden="true">
+            <label for="botcheck">Do not fill this</label>
+            <input type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
+          </div>
+
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label for="name" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Full Name *</label>
+              <label for="first_name" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">First Name *</label>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="first_name"
+                name="first_name"
                 required
                 class="w-full px-4 py-3 bg-[#2D2D2D] border border-[#4A4A4A] rounded-lg text-white placeholder-[#6B6B6B] focus:border-[#B8D430] focus:outline-none transition-colors"
-                placeholder="John Smith"
+                placeholder="John"
+              />
+            </div>
+            <div>
+              <label for="last_name" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Last Name *</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                required
+                class="w-full px-4 py-3 bg-[#2D2D2D] border border-[#4A4A4A] rounded-lg text-white placeholder-[#6B6B6B] focus:border-[#B8D430] focus:outline-none transition-colors"
+                placeholder="Smith"
+              />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="email" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 bg-[#2D2D2D] border border-[#4A4A4A] rounded-lg text-white placeholder-[#6B6B6B] focus:border-[#B8D430] focus:outline-none transition-colors"
+                placeholder="john@example.com"
               />
             </div>
             <div>
@@ -42,29 +78,17 @@ import { siteConfig, socialLinks, quoteLinks } from '../data/siteData';
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Email Address *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full px-4 py-3 bg-[#2D2D2D] border border-[#4A4A4A] rounded-lg text-white placeholder-[#6B6B6B] focus:border-[#B8D430] focus:outline-none transition-colors"
-              placeholder="john@example.com"
-            />
-          </div>
-
-          <div>
-            <label for="insurance-type" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Insurance Type</label>
+            <label for="insurance_type" class="block text-sm font-medium text-[#9CA3AF] mb-1.5">Insurance Type</label>
             <select
-              id="insurance-type"
-              name="insurance-type"
+              id="insurance_type"
+              name="insurance_type"
               class="w-full px-4 py-3 bg-[#2D2D2D] border border-[#4A4A4A] rounded-lg text-white focus:border-[#B8D430] focus:outline-none transition-colors"
             >
               <option value="">Select an option...</option>
-              <option value="personal">Personal Insurance</option>
-              <option value="commercial">Commercial / Business Insurance</option>
-              <option value="life">Life Insurance</option>
-              <option value="other">Not Sure / Other</option>
+              <option value="Personal Insurance">Personal Insurance</option>
+              <option value="Commercial / Business Insurance">Commercial / Business Insurance</option>
+              <option value="Life Insurance">Life Insurance</option>
+              <option value="Not Sure / Other">Not Sure / Other</option>
             </select>
           </div>
 
@@ -79,13 +103,30 @@ import { siteConfig, socialLinks, quoteLinks } from '../data/siteData';
             ></textarea>
           </div>
 
+          <!-- Error message -->
+          <div id="form-error" class="hidden px-4 py-3 bg-red-900/30 border border-red-500/50 rounded-lg text-red-300 text-sm">
+            Something went wrong. Please try again or call us directly at 303-994-7814.
+          </div>
+
           <button
             type="submit"
+            id="submit-btn"
             class="w-full py-3.5 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg cursor-pointer"
           >
             Send Message
           </button>
         </form>
+
+        <!-- Success message -->
+        <div id="form-success" class="hidden text-center py-16">
+          <div class="w-16 h-16 bg-[#B8D430]/20 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-[#B8D430]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-2">Got it! I'll be in touch soon.</h3>
+          <p class="text-[#9CA3AF]">I personally review every inquiry and will get back to you within one business day.</p>
+        </div>
       </div>
 
       <!-- Contact Info -->
@@ -169,3 +210,89 @@ import { siteConfig, socialLinks, quoteLinks } from '../data/siteData';
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const errorEl = document.getElementById('form-error') as HTMLDivElement;
+  const successEl = document.getElementById('form-success') as HTMLDivElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.classList.add('hidden');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+    const firstName = (formData.get('first_name') as string) || '';
+    const lastName = (formData.get('last_name') as string) || '';
+    const email = (formData.get('email') as string) || '';
+    const phone = (formData.get('phone') as string) || '';
+    const insuranceType = (formData.get('insurance_type') as string) || '';
+    const message = (formData.get('message') as string) || '';
+
+    // Set dynamic hidden fields
+    (document.getElementById('form-subject') as HTMLInputElement).value =
+      `New Quote Request from ${firstName}`;
+    (document.getElementById('form-replyto') as HTMLInputElement).value = email;
+
+    // Build Web3Forms JSON payload
+    const web3Payload: Record<string, string> = {
+      access_key: '6d8b0eb5-2cdf-4645-9a78-fd2ad9be0755',
+      subject: `New Quote Request from ${firstName}`,
+      from_name: 'Patrick Henigan – Valor Insurance Group',
+      replyto: email,
+      name: `${firstName} ${lastName}`,
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      phone: phone,
+      insurance_type: insuranceType,
+      message: message,
+      botcheck: (formData.get('botcheck') as string) || '',
+    };
+
+    try {
+      // Submit to Web3Forms
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(web3Payload),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        throw new Error(data.message || 'Form submission failed');
+      }
+
+      // POST to Make.com webhook (fire-and-forget)
+      const webhookPayload = {
+        name: `${firstName} ${lastName}`,
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone,
+        insurance_type: insuranceType,
+        message: message,
+        timestamp: new Date().toISOString(),
+        page_url: window.location.href,
+        referrer: document.referrer,
+      };
+
+      fetch('https://hook.us2.make.com/mqniud4n8u43dbn1wjaq8t99t8fgkunc', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(webhookPayload),
+      }).catch(() => {});
+
+      // Show success
+      form.classList.add('hidden');
+      successEl.classList.remove('hidden');
+    } catch {
+      errorEl.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    }
+  });
+</script>

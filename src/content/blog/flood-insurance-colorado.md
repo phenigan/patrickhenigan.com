@@ -18,7 +18,7 @@ faq:
     answer: "NFIP flood policies have a standard 30-day waiting period before coverage takes effect. Some private flood insurers offer shorter waiting periods, sometimes as little as 10-14 days. You cannot buy flood insurance during or right before an expected flood event."
 ---
 
-Here's something that surprises a lot of Colorado homeowners: your standard homeowners insurance **does not cover flooding**. Not even a little.
+Here's something that surprises a lot of Colorado homeowners: your standard [homeowners insurance](/personal-insurance/homeowners/) **does not cover flooding**. Not even a little.
 
 If your basement floods from a burst river, snowmelt runoff, or a flash flood after a summer storm, your homeowners policy won't pay for it. For that, you need a separate flood insurance policy.
 
@@ -29,7 +29,7 @@ Let's break down how flood insurance works, whether you actually need it, and wh
 When people think of flood risk, they think of coastal states. But Colorado has a long and serious history of flooding:
 
 - **September 2013 Front Range floods** — Over 1,800 homes destroyed, 18,000 damaged, $2 billion in damage. Entire communities in Boulder, Larimer, and Weld counties were devastated.
-- **Flash floods** — Colorado's mountainous terrain and afternoon thunderstorms create dangerous flash flood conditions, especially in burn scar areas after wildfires.
+- **Flash floods** — Colorado's mountainous terrain and afternoon thunderstorms create dangerous flash flood conditions, especially in burn scar areas after [wildfires](/blog/colorado-wildfire-insurance/).
 - **Snowmelt runoff** — Spring snowmelt can overwhelm rivers and drainage systems, flooding properties that don't seem anywhere near a waterway.
 - **Urban flooding** — Rapid development in the Front Range has increased impervious surfaces (concrete, asphalt), which means more water runoff during storms.
 
@@ -86,7 +86,7 @@ It depends on your situation. For most Colorado homeowners:
 
 - If you need basic coverage and your home value is under $250,000, **NFIP** is straightforward and reliable.
 - If you have a higher-value home, want higher limits, or want additional coverages, **private flood** may be the better option.
-- An independent agent can quote both options and help you compare.
+- An [independent agent](/blog/independent-vs-captive-insurance-agent/) can quote both options and help you compare.
 
 ## How Much Does It Cost?
 
@@ -120,7 +120,7 @@ The cost of a flood policy — often $30-80 per month — is far less than the c
 
 Don't assume you're safe because you're "not in a flood zone." Colorado's flooding history proves otherwise. A flood insurance policy is relatively affordable and provides coverage that your homeowners policy simply doesn't.
 
-If you want to check your flood zone and get a quote, reach out. We can walk you through your options and help you find the right coverage.
+If you want to check your flood zone and get a quote, reach out. We can walk you through your options and help you find the right [flood insurance](/personal-insurance/flood/) coverage.
 
 ---
 

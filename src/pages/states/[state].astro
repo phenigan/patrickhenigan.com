@@ -15,8 +15,12 @@ export function getStaticPaths() {
 
 const { code, name, nickname, topConcerns, personalHighlights, commercialHighlights, metaDescription } = Astro.props;
 
-const relevantPersonal = personalInsuranceTypes.filter(t => personalHighlights.includes(t.name));
-const relevantCommercial = commercialInsuranceTypes.filter(t => commercialHighlights.includes(t.name));
+const lifeInsuranceTypes = [
+  { name: 'Term Life', slug: 'term-life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
+  { name: 'Whole Life', slug: 'whole-life', description: 'Permanent coverage that lasts your entire life and builds cash value over time. A foundation for long-term financial planning.' },
+  { name: 'Universal Life', slug: 'universal-life', description: 'Flexible permanent coverage with adjustable premiums and death benefits. Offers more control over how your policy grows.' },
+  { name: 'Final Expense', slug: 'final-expense', description: 'Smaller policies designed to cover funeral costs and end-of-life expenses, so your family isn\'t burdened financially.' },
+];
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -31,11 +35,19 @@ const breadcrumbSchema = {
 const faqItems = [
   {
     question: `What types of insurance do I need in ${name}?`,
-    answer: `It depends on your situation, but most ${name} residents benefit from homeowners (or renters) insurance, auto insurance, and an umbrella policy for extra liability protection. We help you figure out exactly what coverage makes sense for your life in ${name} — no more, no less.`,
+    answer: `It depends on your situation. Most ${name} residents benefit from homeowners (or renters) insurance, auto insurance, and an umbrella policy. If you own a business, general liability, workers compensation, and commercial property coverage are essential. And life insurance protects your family's financial future. We help you figure out exactly what coverage makes sense — no more, no less.`,
   },
   {
     question: `How do I get an insurance quote in ${name}?`,
-    answer: `It's easy. Click "Get Started" on this page to fill out a short form, or call us at 303-994-7814. As an independent agency licensed in ${name}, we compare rates from dozens of top carriers to find you the best coverage and price.`,
+    answer: `It's easy. Click any of the "Get Started" buttons on this page, or call us at 303-994-7814. As an independent agency licensed in ${name}, we compare rates from dozens of top carriers to find you the best coverage and price for personal, commercial, and life insurance.`,
+  },
+  {
+    question: `Do you offer business insurance in ${name}?`,
+    answer: `Yes. We offer a full range of commercial insurance in ${name} including general liability, commercial property, workers compensation, commercial auto, professional liability, and commercial umbrella policies. We work with multiple carriers to find the best rates for your business.`,
+  },
+  {
+    question: `What life insurance options are available in ${name}?`,
+    answer: `We offer term life, whole life, universal life, and final expense policies in ${name}. Whether you need affordable coverage for a specific period or permanent protection that builds cash value, we'll help you find the right fit for your family and budget.`,
   },
   {
     question: `Do you offer flood insurance in ${name}?`,
@@ -60,12 +72,23 @@ const faqItems = [
       <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href={quoteLinks.personal}
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
         >
-          Get Started
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+          Get Personal Insurance
+        </a>
+        <a
+          href={quoteLinks.commercial}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+        >
+          Get Business Insurance
+        </a>
+        <a
+          href={quoteLinks.life}
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+        >
+          Get Life Insurance
         </a>
       </div>
     </div>
@@ -95,7 +118,7 @@ const faqItems = [
         <p class="text-[#9CA3AF] max-w-2xl mx-auto">Coverage tailored to the risks and needs of {name} residents.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relevantPersonal.map((type) => (
+        {personalInsuranceTypes.map((type) => (
           <ServiceCard name={type.name} description={type.description} href={`/personal-insurance/${type.slug}/`} />
         ))}
       </div>
@@ -104,13 +127,10 @@ const faqItems = [
           href={quoteLinks.personal}
           class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
         >
-          Get a Personal Quote
+          Get Personal Insurance
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </a>
-        <a href="/personal-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
-          Get Personal Insurance →
         </a>
       </div>
     </div>
@@ -125,7 +145,7 @@ const faqItems = [
         <p class="text-[#9CA3AF] max-w-2xl mx-auto">Protect your {name} business with coverage built around your operations.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relevantCommercial.map((type) => (
+        {commercialInsuranceTypes.map((type) => (
           <ServiceCard name={type.name} description={type.description} href={`/commercial-insurance/${type.slug}/`} />
         ))}
       </div>
@@ -136,31 +156,39 @@ const faqItems = [
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
         >
-          Get a Commercial Quote
+          Get Business Insurance
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </a>
-        <a href="/commercial-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
-          Get Business Insurance →
         </a>
       </div>
     </div>
   </section>
 
   <!-- Life Insurance -->
-  <section class="py-16 px-4 bg-[#2D2D2D]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Life Insurance in {name}</h2>
-      <p class="text-[#9CA3AF] max-w-2xl mx-auto mb-8">
-        Protect your family's future with term, whole, or universal life insurance. We help {name} residents find the right life coverage at the right price.
-      </p>
-      <a href="/life-insurance/" class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors">
-        Explore Life Insurance
-        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Life Insurance in {name}</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Protect your family's future with the right life insurance policy. We help {name} residents find coverage at the right price.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {lifeInsuranceTypes.map((type) => (
+          <ServiceCard name={type.name} description={type.description} href={`/life-insurance/${type.slug}/`} />
+        ))}
+      </div>
+      <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href={quoteLinks.life}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+        >
+          Get Life Insurance
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 

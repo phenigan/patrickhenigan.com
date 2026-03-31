@@ -27,13 +27,13 @@ But there's something nobody tells you about in the relocation brochures: insura
 If you're moving from a state where hail is rare, this is going to be your biggest adjustment. Colorado — especially the Front Range from Fort Collins to Pueblo — gets hit by severe hailstorms every spring and summer. Hail damage is the number one homeowners insurance claim in the state.
 
 This means:
-- Your homeowners premium will likely include a separate **wind and hail deductible** (usually 1-3% of your home's insured value)
+- Your homeowners premium will likely include a separate **[wind and hail deductible](/blog/colorado-wind-hail-deductibles/)** (usually 1-3% of your home's insured value)
 - You'll want to pay attention to your roof coverage (ACV vs. RCV)
 - If you're buying a home, the condition and material of the roof matters a lot for your insurance rate
 
 ### Wildfire Risk Is Real — Even in the Suburbs
 
-You don't have to live in the mountains to face wildfire risk in Colorado. The Marshall Fire in 2021 proved that suburban communities along the foothills are vulnerable too. Depending on where you buy, your homeowners insurance could be significantly affected by wildfire risk.
+You don't have to live in the mountains to face [wildfire risk](/blog/colorado-wildfire-insurance/) in Colorado. The Marshall Fire in 2021 proved that suburban communities along the foothills are vulnerable too. Depending on where you buy, your homeowners insurance could be significantly affected by wildfire risk.
 
 ### Altitude Changes Everything
 
@@ -74,7 +74,7 @@ You need a Colorado license within 90 days as well. Your insurance carrier will 
 **6. Review your coverage limits.**
 Colorado minimum auto insurance requirements (25/50/15) are extremely low. Most insurance professionals recommend at least 100/300/100 or higher. If you're coming from a state with higher minimums, don't downgrade just because Colorado allows lower limits.
 
-**7. Consider an umbrella policy.**
+**7. Consider an [umbrella policy](/blog/umbrella-insurance-colorado/).**
 If you're buying a home and have assets to protect, an umbrella policy provides an extra layer of liability coverage above your home and auto policies. In Colorado, where lawsuit settlements can be substantial, this is worth considering.
 
 ## What to Expect on Price
@@ -101,7 +101,7 @@ These are ballpark figures. Your actual rates depend on your specific situation 
 
 **Choose your home wisely.** The age and condition of the roof, proximity to fire stations, wildfire risk zone, and flood zone all affect your insurance cost. Ask your agent to run insurance estimates on any home you're seriously considering.
 
-**Shop with an independent agent.** Different carriers price Colorado risks very differently. An independent agent can compare 10-20+ carriers to find the best rate for your specific situation. One carrier might be great for your neighbor and terrible for you — and vice versa.
+**Shop with an [independent agent](/blog/independent-vs-captive-insurance-agent/).** Different carriers price Colorado risks very differently. An independent agent can compare 10-20+ carriers to find the best rate for your specific situation. One carrier might be great for your neighbor and terrible for you — and vice versa.
 
 **Consider impact-resistant roofing.** If you're buying a home that needs a new roof, or building new, Class 4 impact-resistant shingles can earn you a significant discount on your premium.
 
@@ -111,7 +111,7 @@ These are ballpark figures. Your actual rates depend on your specific situation 
 
 Moving to Colorado is a great decision. The state is incredible. But your insurance needs are going to be different from what you're used to, and the sooner you get ahead of it, the better.
 
-If you're planning a move to Colorado — or you've just arrived and need to get your insurance sorted — we're here to help. We'll walk you through everything, compare options across carriers, and make sure you're covered the right way from day one.
+If you're planning a move to Colorado — or you've just arrived and need to get your insurance sorted — we're here to help. Start by exploring our [personal insurance](/personal-insurance/) options, or check our guide on [home insurance costs in Colorado](/blog/home-insurance-cost-colorado/). We'll walk you through everything, compare options across carriers, and make sure you're covered the right way from day one.
 
 ---
 

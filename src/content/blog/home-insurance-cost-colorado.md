@@ -44,13 +44,13 @@ These are estimates for a typical single-family home with standard coverage. You
 
 This is the big one. Colorado ranks in the top three states for hail damage claims year after year. The Front Range corridor from Fort Collins to Pueblo gets battered by severe hailstorms every spring and summer. One bad storm can result in thousands of roof replacements in a single metro area.
 
-Insurers have responded by raising rates and shifting to percentage-based wind and hail deductibles. This trend isn't slowing down.
+Insurers have responded by raising rates and shifting to [percentage-based wind and hail deductibles](/blog/colorado-wind-hail-deductibles/). This trend isn't slowing down.
 
 ### 2. Wildfire Risk
 
 Colorado's wildfire risk has expanded dramatically. The Marshall Fire in late 2021 destroyed over 1,000 homes in suburban Boulder County — an area many homeowners never considered to be wildfire territory.
 
-If your home is in or near a wildfire-prone area, your premium could be significantly higher. Some carriers won't write new policies in certain fire zones at all.
+If your home is in or near a wildfire-prone area, your premium could be significantly higher. Some carriers won't write new policies in certain fire zones at all. Learn more in our [Colorado wildfire insurance guide](/blog/colorado-wildfire-insurance/).
 
 ### 3. Rising Construction Costs
 
@@ -82,9 +82,9 @@ Beyond your location, here are the specific factors that determine what you pay:
 
 Here are the most effective ways to lower your premium without cutting coverage:
 
-**1. Work with an independent agent.** This is the single most impactful thing you can do. An independent agent (like us) shops your policy across multiple carriers to find the best rate for your coverage level. Captive agents can only offer you one company's pricing.
+**1. Work with an [independent agent](/blog/independent-vs-captive-insurance-agent/).** This is the single most impactful thing you can do. An independent agent (like us) shops your policy across multiple carriers to find the best rate for your coverage level. Captive agents can only offer you one company's pricing.
 
-**2. Bundle your policies.** Combining home and auto insurance with the same carrier typically saves 10-20% on your home premium.
+**2. Bundle your policies.** Combining [home](/personal-insurance/homeowners/) and [auto](/personal-insurance/auto/) insurance with the same carrier typically saves 10-20% on your home premium.
 
 **3. Upgrade your roof.** If your roof is nearing end of life, replacing it with impact-resistant shingles (Class 4) can earn significant discounts — sometimes 20-30% off your premium.
 
@@ -98,7 +98,7 @@ Here are the most effective ways to lower your premium without cutting coverage:
 
 Colorado home insurance isn't cheap, and it's probably not getting cheaper anytime soon. But that doesn't mean you're stuck overpaying. The right coverage at the right price exists — you just need someone who knows how to find it.
 
-If you want to see how your current premium compares, or if you're shopping for a new policy, we're happy to run a free comparison. No pressure, no obligation.
+If you want to see how your current premium compares, or if you're shopping for a new policy, we're happy to run a free comparison. No pressure, no obligation. You may also want to consider an [umbrella policy](/blog/umbrella-insurance-colorado/) for additional protection beyond your home coverage.
 
 ---
 

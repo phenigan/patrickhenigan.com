@@ -75,7 +75,7 @@ If you haven't done this yet — do it today, before you need it.
 
 ## Step 4: Contact Your Insurance Agent
 
-Call your agent — not the carrier's 800 number. Here's why:
+Call your agent — not the carrier's 800 number. Here's why (and here's [why an independent agent matters](/blog/independent-vs-captive-insurance-agent/)):
 
 Your agent knows your policy, understands your coverage, and works for you. When you call a carrier's claims line directly, you're talking to someone who works for the insurance company and may not explain your full options.
 
@@ -146,13 +146,13 @@ Once you agree on a settlement:
 ## Colorado-Specific Tips
 
 - **Hail claims are common** — adjusters in Colorado are experienced with hail damage. Get a roofing contractor's opinion in addition to the adjuster's estimate.
-- **Wind/hail deductible** — Remember, your wind/hail deductible is likely a percentage of your home's value, not a flat dollar amount. Know your number before you file.
+- **[Wind/hail deductible](/blog/colorado-wind-hail-deductibles/)** — Remember, your wind/hail deductible is likely a percentage of your home's value, not a flat dollar amount. Know your number before you file.
 - **Storm chaser contractors** — After major hailstorms, out-of-state "storm chaser" contractors flood Colorado. Be cautious. Use licensed, insured, local contractors with verifiable references.
 - **Colorado law protects you** — Colorado's Homeowner Insurance Reform Act provides protections for policyholders, including requirements for timely claims processing.
 
 ## Bottom Line
 
-Filing a claim doesn't have to be a nightmare. Document everything, work with your agent, and don't settle for less than what your policy owes you. That's why having the right agent matters — someone who knows your policy, fights for your settlement, and guides you through the process from start to finish.
+Filing a claim doesn't have to be a nightmare. Document everything, work with your agent, and don't settle for less than what your [homeowners insurance](/personal-insurance/homeowners/) policy owes you. That's why having the right agent matters — someone who knows your policy, fights for your settlement, and guides you through the process from start to finish.
 
 ---
 

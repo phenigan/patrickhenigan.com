@@ -34,7 +34,7 @@ There's nothing wrong with these companies. They're large, established, and they
 
 An independent agent works with **multiple insurance carriers** — often 10, 20, or more. Instead of representing one company, they represent you. They shop your policy across several carriers to find the best fit.
 
-At Valor Insurance Group, we work through Direct Insurance Services, which gives us access to dozens of top-rated carriers. When you come to us, we compare rates and coverage options across all of them to find the right match for your situation.
+At Valor Insurance Group, we work through Direct Insurance Services, which gives us access to dozens of top-rated carriers. When you come to us, we compare rates and coverage options across all of them to find the right match — whether you need [personal insurance](/personal-insurance/), [business insurance](/commercial-insurance/), or [life insurance](/life-insurance/).
 
 ## The Key Differences
 
@@ -60,9 +60,9 @@ An independent agent runs your information through multiple carriers and shows y
 
 Colorado has unique risks that make carrier selection especially important:
 
-**Hail:** Some carriers handle hail-prone areas better than others. Some offer flat dollar deductibles while others only offer percentage-based. Some have RCV roof coverage while others default to ACV. An independent agent knows which carriers have the best terms for hail country.
+**Hail:** Some carriers handle hail-prone areas better than others. Some offer flat dollar deductibles while others only offer percentage-based. Some have RCV roof coverage while others default to ACV. An independent agent knows which carriers have the best terms for hail country. Learn more about [wind and hail deductibles in Colorado](/blog/colorado-wind-hail-deductibles/).
 
-**Wildfire:** Not all carriers will write policies in wildfire-prone areas. An independent agent knows which carriers are still active in your zone and can find you coverage when others can't.
+**Wildfire:** Not all carriers will write policies in wildfire-prone areas. An independent agent knows which carriers are still active in your zone and can find you coverage when others can't. See our [wildfire insurance guide](/blog/colorado-wildfire-insurance/) for more details.
 
 **High altitude:** Altitude creates unique wear on roofing and exterior materials. Some carriers account for this better than others in their underwriting.
 

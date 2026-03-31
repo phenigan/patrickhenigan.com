@@ -15,9 +15,14 @@ export function getStaticPaths() {
 
 const { name, slug, metaDescription, intro, personalIntro, personalHighlights, commercialIntro, commercialHighlights, riskFactors, faq } = Astro.props;
 
-const relevantPersonal = personalInsuranceTypes.filter((t) => personalHighlights.includes(t.name));
-const relevantCommercial = commercialInsuranceTypes.filter((t) => commercialHighlights.includes(t.name));
 const pageUrl = `${siteConfig.site}/locations/${slug}/`;
+
+const lifeInsuranceTypes = [
+  { name: 'Term Life', slug: 'term-life', description: 'Affordable coverage for a specific period — 10, 20, or 30 years. Ideal for covering a mortgage, raising kids, or protecting income during your working years.' },
+  { name: 'Whole Life', slug: 'whole-life', description: 'Permanent coverage that lasts your entire life and builds cash value over time. A foundation for long-term financial planning.' },
+  { name: 'Universal Life', slug: 'universal-life', description: 'Flexible permanent coverage with adjustable premiums and death benefits. Offers more control over how your policy grows.' },
+  { name: 'Final Expense', slug: 'final-expense', description: 'Smaller policies designed to cover funeral costs and end-of-life expenses, so your family isn\'t burdened financially.' },
+];
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -68,21 +73,23 @@ const breadcrumbSchema = {
       <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href={quoteLinks.personal}
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
         >
-          Get Started
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+          Get Personal Insurance
         </a>
         <a
-          href={`tel:${siteConfig.phone}`}
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-[#B8D430] text-[#B8D430] hover:bg-[#B8D430] hover:text-[#2D2D2D] font-bold rounded-lg transition-colors text-lg"
+          href={quoteLinks.commercial}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
         >
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          {siteConfig.phone}
+          Get Business Insurance
+        </a>
+        <a
+          href={quoteLinks.life}
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+        >
+          Get Life Insurance
         </a>
       </div>
     </div>
@@ -113,22 +120,16 @@ const breadcrumbSchema = {
         <p class="text-[#9CA3AF] max-w-3xl mx-auto">{personalIntro}</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relevantPersonal.map((type) => (
+        {personalInsuranceTypes.map((type) => (
           <ServiceCard name={type.name} description={type.description} href={`/personal-insurance/${type.slug}/`} />
         ))}
       </div>
       <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a
           href={quoteLinks.personal}
-          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5"
         >
-          Get a Personal Quote
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-        <a href="/personal-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
-          Get Personal Insurance →
+          Get Personal Insurance
         </a>
       </div>
     </div>
@@ -143,7 +144,7 @@ const breadcrumbSchema = {
         <p class="text-[#9CA3AF] max-w-3xl mx-auto">{commercialIntro}</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relevantCommercial.map((type) => (
+        {commercialInsuranceTypes.map((type) => (
           <ServiceCard name={type.name} description={type.description} href={`/commercial-insurance/${type.slug}/`} />
         ))}
       </div>
@@ -152,33 +153,35 @@ const breadcrumbSchema = {
           href={quoteLinks.commercial}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors"
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5"
         >
-          Get a Business Quote
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-        <a href="/commercial-insurance/" class="text-[#B8D430] hover:text-[#A6C22A] font-medium transition-colors">
-          Get Business Insurance →
+          Get Business Insurance
         </a>
       </div>
     </div>
   </section>
 
   <!-- Life Insurance -->
-  <section class="py-16 px-4 bg-[#2D2D2D]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Life Insurance in {name}</h2>
-      <p class="text-[#9CA3AF] max-w-2xl mx-auto mb-8">
-        Protect your family's future with term, whole, or universal life insurance. We help {name} residents find the right life coverage at the right price.
-      </p>
-      <a href="/life-insurance/" class="inline-flex items-center gap-2 px-8 py-4 bg-[#B8D430] hover:bg-[#A6C22A] text-[#2D2D2D] font-bold rounded-lg transition-colors">
-        Explore Life Insurance
-        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
+  <section class="py-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Life Insurance in {name}</h2>
+        <div class="accent-line-center w-24 mx-auto mb-6"></div>
+        <p class="text-[#9CA3AF] max-w-2xl mx-auto">Protect your family's future with the right life insurance policy. We help {name} residents find coverage at the right price.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {lifeInsuranceTypes.map((type) => (
+          <ServiceCard name={type.name} description={type.description} href={`/life-insurance/${type.slug}/`} />
+        ))}
+      </div>
+      <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href={quoteLinks.life}
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#B8D430] text-[#2D2D2D] font-bold rounded-lg text-lg hover:bg-[#c9e244] hover:shadow-lg hover:shadow-[#B8D430]/20 transition-all duration-300 hover:-translate-y-0.5"
+        >
+          Get Life Insurance
+        </a>
+      </div>
     </div>
   </section>
 

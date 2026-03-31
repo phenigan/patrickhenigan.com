@@ -35,7 +35,7 @@ The VA provides health care services at VA medical centers and clinics. But ther
 - **Wait times can be long.** Depending on your location and the type of care, getting an appointment can take weeks or months.
 - **It doesn't satisfy ACA requirements** for dependents or for you if you're not enrolled.
 
-**Bottom line:** VA health care is a valuable benefit, but most veterans still need some form of private health insurance — especially for their families, for non-VA providers, and for emergencies when a VA facility isn't accessible.
+**Bottom line:** VA health care is a valuable benefit, but most veterans still need some form of private health insurance — especially for their families, for non-VA providers, and for emergencies when a VA facility isn't accessible. Explore your [personal insurance](/personal-insurance/) options to fill the gaps.
 
 ### VA Life Insurance (SGLI/VGLI)
 
@@ -47,7 +47,7 @@ Here's the catch with VGLI:
 - By your 40s and 50s, VGLI can be **significantly more expensive** than private term life insurance
 - VGLI doesn't require a medical exam, which is an advantage if you have service-connected health issues
 
-**What to do:** When you separate, compare VGLI premiums with private term life insurance quotes. If you're in good health, private term life is often cheaper. If you have health conditions that would make private life insurance expensive or unavailable, VGLI's guaranteed acceptance is a major advantage.
+**What to do:** When you separate, compare VGLI premiums with private [term life insurance](/life-insurance/term-life/) quotes. If you're in good health, private term life is often cheaper. If you have health conditions that would make private life insurance expensive or unavailable, VGLI's guaranteed acceptance is a major advantage.
 
 ### VA Home Loan Benefits
 
@@ -58,7 +58,7 @@ The VA home loan is one of the best benefits available to veterans:
 - **Competitive interest rates**
 - **Limited closing costs**
 
-But you still need **homeowners insurance**. The VA requires it as a condition of the loan, just like any other mortgage lender. The VA doesn't provide homeowners insurance — you buy it on the open market.
+But you still need **[homeowners insurance](/personal-insurance/homeowners/)**. The VA requires it as a condition of the loan, just like any other mortgage lender. The VA doesn't provide homeowners insurance — you buy it on the open market.
 
 ## Insurance Discounts for Veterans
 
@@ -108,11 +108,11 @@ Always tell your insurance agent you're a veteran. Every time. For every type of
 
 ### Mistake 4: Skipping Renters Insurance
 
-A lot of younger veterans transitioning out of the service rent their first apartment and skip renters insurance. At $15-30/month, renters insurance covers your belongings, provides liability protection, and covers temporary housing if your place becomes uninhabitable. It's one of the best deals in insurance.
+A lot of younger veterans transitioning out of the service rent their first apartment and skip [renters insurance](/personal-insurance/renters/). At $15-30/month, renters insurance covers your belongings, provides liability protection, and covers temporary housing if your place becomes uninhabitable. It's one of the best deals in insurance.
 
 ### Mistake 5: Not Using an Independent Agent
 
-USAA is popular with veterans — and for good reason. But they're not always the cheapest or the best fit for every situation. An independent agent can compare USAA against other veteran-friendly carriers and make sure you're getting the best overall package.
+USAA is popular with veterans — and for good reason. But they're not always the cheapest or the best fit for every situation. An [independent agent](/blog/independent-vs-captive-insurance-agent/) can compare USAA against other veteran-friendly carriers and make sure you're getting the best overall package.
 
 ## Your Veteran Insurance Checklist
 
@@ -128,7 +128,7 @@ Here's a quick checklist for veterans at any stage:
 - [ ] Use your VA home loan benefit (no PMI!)
 - [ ] Shop homeowners insurance through an independent agent
 - [ ] Ask about veteran discounts on every policy
-- [ ] Consider an umbrella policy to protect your assets
+- [ ] Consider an [umbrella policy](/blog/umbrella-insurance-colorado/) to protect your assets
 
 **Established veteran:**
 - [ ] Review all your policies annually

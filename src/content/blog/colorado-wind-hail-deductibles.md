@@ -26,7 +26,7 @@ Let's break down what wind and hail deductibles actually mean, how they work, an
 
 Most homeowners policies have a standard deductible — the amount you pay out of pocket before insurance covers the rest. For many people, that's somewhere between $1,000 and $2,500.
 
-But in Colorado (and other hail-prone states), insurers often add a **separate, higher deductible** that applies specifically to wind and hail damage. This is your wind and hail deductible, and it works differently from your standard deductible.
+But in Colorado (and other hail-prone states), insurers often add a **separate, higher deductible** that applies specifically to wind and hail damage. This is your wind and hail deductible, and it works differently from your standard deductible. Understanding this is essential for anyone with a [homeowners insurance](/personal-insurance/homeowners/) policy in Colorado.
 
 ## Percentage Deductible vs. Flat Dollar Deductible
 
@@ -91,19 +91,19 @@ Here's a quick checklist for every Colorado homeowner:
 
 ## How an Independent Agent Can Help
 
-This is one of those areas where working with an independent agent really pays off. Because we work with multiple carriers, we can compare:
+This is one of those areas where working with an [independent agent](/blog/independent-vs-captive-insurance-agent/) really pays off. Because we work with multiple carriers, we can compare:
 
 - Which carriers offer flat dollar deductibles vs. percentage
 - Which carriers offer RCV roof coverage vs. ACV
 - How different deductible levels affect your premium
 
-There's no one-size-fits-all answer. The right setup depends on your home's age, roof condition, location, and budget. We help you find the balance between affordable premiums and manageable out-of-pocket costs.
+There's no one-size-fits-all answer. The right setup depends on your home's age, roof condition, location, and budget. We help you find the balance between affordable premiums and manageable out-of-pocket costs. For a broader look at what affects your premium, see our guide on [home insurance costs in Colorado](/blog/home-insurance-cost-colorado/).
 
 ## Bottom Line
 
 Colorado's hailstorms aren't going anywhere. The question isn't *if* your home will get hit — it's *when*. Understanding your wind and hail deductible now, before a storm rolls through, can save you from a painful surprise later.
 
-If you're not sure what your current deductible is, or if you want to compare options across carriers, reach out. We'll walk through your policy and make sure you're set up the right way.
+If you're not sure what your current deductible is, or if you want to compare options across carriers, reach out. We'll walk through your policy and make sure you're set up the right way. And if you ever need to [file a hail claim](/blog/home-insurance-claim-colorado/), we'll guide you through that process too.
 
 ---
 
