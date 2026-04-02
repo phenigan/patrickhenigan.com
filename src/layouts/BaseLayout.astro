@@ -34,17 +34,22 @@ const resolvedCanonical = canonicalUrl || new URL(Astro.url.pathname, siteConfig
       rel="stylesheet"
     />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={resolvedCanonical} />
     <meta property="og:site_name" content={siteConfig.business} />
+    <meta property="og:image" content={`${siteConfig.site}/og-image.png`} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteConfig.site}/og-image.png`} />
 
     <!-- Schema.org JSON-LD -->
     <script
