@@ -9,5 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://patrickhenigan.com',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/test/') })],
 });
