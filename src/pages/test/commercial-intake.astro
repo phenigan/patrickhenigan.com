@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Commercial Insurance Intake"
+  description="Internal test page — not for public use."
+>
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <section class="pt-32 pb-20 px-4 bg-[#2D2D2D]">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Commercial Insurance Intake</h1>
+      <p class="text-[#9CA3AF] text-lg leading-relaxed mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <!-- Sembley Intake Form Widget -->
+      <script is:inline src="https://app.sembley.com/widgets/embedded-intake.js"></script>
+      <div id="sembley-intake-form" data-form-id="17476" data-secure-token="MfEx1NaMwHI" data-height="800px" data-show-logo="false" data-assign-to-users="575"></div>
+    </div>
+  </section>
+</BaseLayout>
