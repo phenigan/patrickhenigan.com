@@ -82,7 +82,7 @@ With an independent agent, we work for you. If your claim isn't being handled fa
 
 **"Big companies are more reliable."** The carriers independent agents work with are the same large, A-rated companies that are financially strong and pay claims reliably. Many of them are the same companies behind the big brand names.
 
-**"I'll lose my coverage if I switch."** We handle the entire transition. Your new policy starts the same day your old one ends. There's never a gap.
+**"I'll lose my coverage if I switch."** We handle the entire transition and coordinate the timing so your new policy is in place before your old one expires. There's never a gap.
 
 **"My captive agent gives me good service."** Great service matters, and some captive agents are excellent. But great service with limited options still means limited options. You can have both great service *and* the best coverage by working with the right independent agent.
 
